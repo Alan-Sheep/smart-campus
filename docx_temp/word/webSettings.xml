@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<w:webSettings xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" mc:Ignorable="w14">
+  <w:divs>
+    <w:div w:id="1363242068">
+      <w:bodyDiv w:val="1"/>
+      <w:marLeft w:val="0"/>
+      <w:marRight w:val="0"/>
+      <w:marTop w:val="0"/>
+      <w:marBottom w:val="0"/>
+      <w:divBdr>
+        <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+        <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+      </w:divBdr>
+      <w:divsChild>
+        <w:div w:id="1966961178">
+          <w:blockQuote w:val="1"/>
+          <w:marLeft w:val="720"/>
+          <w:marRight w:val="720"/>
+          <w:marTop w:val="100"/>
+          <w:marBottom w:val="100"/>
+          <w:divBdr>
+            <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+          </w:divBdr>
+        </w:div>
+        <w:div w:id="713240557">
+          <w:blockQuote w:val="1"/>
+          <w:marLeft w:val="720"/>
+          <w:marRight w:val="720"/>
+          <w:marTop w:val="100"/>
+          <w:marBottom w:val="100"/>
+          <w:divBdr>
+            <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+          </w:divBdr>
+        </w:div>
+        <w:div w:id="94639860">
+          <w:blockQuote w:val="1"/>
+          <w:marLeft w:val="720"/>
+          <w:marRight w:val="720"/>
+          <w:marTop w:val="100"/>
+          <w:marBottom w:val="100"/>
+          <w:divBdr>
+            <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+          </w:divBdr>
+        </w:div>
+        <w:div w:id="664286944">
+          <w:blockQuote w:val="1"/>
+          <w:marLeft w:val="720"/>
+          <w:marRight w:val="720"/>
+          <w:marTop w:val="100"/>
+          <w:marBottom w:val="100"/>
+          <w:divBdr>
+            <w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+            <w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/>
+          </w:divBdr>
+        </w:div>
+      </w:divsChild>
+    </w:div>
+  </w:divs>
+  <w:relyOnVML/>
+  <w:allowPNG/>
+</w:webSettings>

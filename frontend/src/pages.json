@@ -1,0 +1,295 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "校园帮手",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/channel/channel",
+      "style": {
+        "navigationBarTitleText": "校园频道",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/channel/detail",
+      "style": {
+        "navigationBarTitleText": "帖子详情"
+      }
+    },
+    {
+      "path": "pages/message/message",
+      "style": {
+        "navigationBarTitleText": "消息",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/school/school",
+      "style": {
+        "navigationBarTitleText": "选择学校"
+      }
+    },
+    {
+      "path": "pages/search/search",
+      "style": {
+        "navigationBarTitleText": "搜索",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/express/express",
+      "style": {
+        "navigationBarTitleText": "快递代取"
+      }
+    },
+    {
+      "path": "pages/express/detail",
+      "style": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/print/print",
+      "style": {
+        "navigationBarTitleText": "打印服务"
+      }
+    },
+    {
+      "path": "pages/print/detail",
+      "style": {
+        "navigationBarTitleText": "打印详情"
+      }
+    },
+    {
+      "path": "pages/errand/errand",
+      "style": {
+        "navigationBarTitleText": "校园跑腿"
+      }
+    },
+    {
+      "path": "pages/errand/detail",
+      "style": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/errand/publish",
+      "style": {
+        "navigationBarTitleText": "发布跑腿"
+      }
+    },
+    {
+      "path": "pages/substitute/substitute",
+      "style": {
+        "navigationBarTitleText": "代课服务"
+      }
+    },
+    {
+      "path": "pages/substitute/detail",
+      "style": {
+        "navigationBarTitleText": "订单详情"
+      }
+    },
+    {
+      "path": "pages/substitute/publish",
+      "style": {
+        "navigationBarTitleText": "发布代课"
+      }
+    },
+    {
+      "path": "pages/activity/activity",
+      "style": {
+        "navigationBarTitleText": "校园活动"
+      }
+    },
+    {
+      "path": "pages/activity/detail",
+      "style": {
+        "navigationBarTitleText": "活动详情"
+      }
+    },
+    {
+      "path": "pages/goods/goods",
+      "style": {
+        "navigationBarTitleText": "二手市场"
+      }
+    },
+    {
+      "path": "pages/goods/detail",
+      "style": {
+        "navigationBarTitleText": "商品详情"
+      }
+    },
+    {
+      "path": "pages/goods/publish",
+      "style": {
+        "navigationBarTitleText": "发布商品"
+      }
+    },
+    {
+      "path": "pages/game/game",
+      "style": {
+        "navigationBarTitleText": "游戏搭子"
+      }
+    },
+    {
+      "path": "pages/game/detail",
+      "style": {
+        "navigationBarTitleText": "搭子详情"
+      }
+    },
+    {
+      "path": "pages/game/publish",
+      "style": {
+        "navigationBarTitleText": "发布找搭子"
+      }
+    },
+    {
+      "path": "pages/lostfound/lostfound",
+      "style": {
+        "navigationBarTitleText": "失物招领"
+      }
+    },
+    {
+      "path": "pages/lostfound/detail",
+      "style": {
+        "navigationBarTitleText": "详情"
+      }
+    },
+    {
+      "path": "pages/lostfound/publish",
+      "style": {
+        "navigationBarTitleText": "发布"
+      }
+    },
+    {
+      "path": "pages/message/list",
+      "style": {
+        "navigationBarTitleText": "消息列表",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/message/detail",
+      "style": {
+        "navigationBarTitleText": "消息详情",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/message/chat",
+      "style": {
+        "navigationBarTitleText": "聊天",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/setting",
+      "style": {
+        "navigationBarTitleText": "设置"
+      }
+    },
+    {
+      "path": "pages/mine/feedback",
+      "style": {
+        "navigationBarTitleText": "意见反馈"
+      }
+    },
+    {
+      "path": "pages/mine/about",
+      "style": {
+        "navigationBarTitleText": "关于我们"
+      }
+    },
+    {
+      "path": "pages/mine/profile",
+      "style": {
+        "navigationBarTitleText": "个人资料"
+      }
+    },
+    {
+      "path": "pages/mine/my-list",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/mine/collection",
+      "style": {
+        "navigationBarTitleText": "我的收藏"
+      }
+    },
+    {
+      "path": "pages/mine/address",
+      "style": {
+        "navigationBarTitleText": "地址管理"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "智慧校园",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f5f5f7"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#6c4ee6",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/channel/channel",
+        "text": "校园频道",
+        "iconPath": "static/tabbar/channel.png",
+        "selectedIconPath": "static/tabbar/channel-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "static/tabbar/message.png",
+        "selectedIconPath": "static/tabbar/message-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine-active.png"
+      }
+    ]
+  },
+  "condition": {
+    "current": 0,
+    "list": [
+      {
+        "name": "首页",
+        "path": "pages/index/index"
+      }
+    ]
+  }
+}

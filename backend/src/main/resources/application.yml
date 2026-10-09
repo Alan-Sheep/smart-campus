@@ -1,0 +1,128 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    # 默认激活 local（若存在 application-local.yml 则其中的私密配置生效）
+    active: local
+  application:
+    name: smart-campus
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/smart_campus?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # Redis 密码（没有密码就留空或注释掉此行）
+    # 报错 NOAUTH Authentication required 时填写正确密码
+    password: 123456
+    database: 0
+    timeout: 5000ms
+    # 使用 Jedis 客户端（直连，无 Netty DNS 解析问题）
+    jedis:
+      pool:
+        # 连接池最大连接数
+        max-active: 16
+        # 连接池最大阻塞等待时间（毫秒）
+        max-wait: 3000ms
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 2
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+  # 邮件服务（邮箱验证码）：
+  # 真实账号密码放在 application-local.yml（不进版本库/备份说明），
+  # 未配置 local 文件时 email.enabled=false，验证码走「开发模式」直接返回给前端（原模拟行为）
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: ${EMAIL_USERNAME:}
+    password: ${EMAIL_AUTH_CODE:}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+          connectiontimeout: 5000
+          timeout: 8000
+          writetimeout: 8000
+
+# 邮箱验证码配置
+email-code:
+  # 是否启用真实邮件发送：false=开发模式（验证码直接返回前端，便于测试）
+  # local 配置文件提供账号后改为 true
+  enabled: false
+  # 发件人显示名
+  from-name: 智慧校园
+  # 验证码有效期（秒）
+  ttl-seconds: 300
+  # 同一邮箱重发间隔（秒）
+  resend-interval: 60
+  # 同一邮箱单日发送上限
+  daily-limit: 10
+  # 同一 IP 单日发送上限
+  ip-daily-limit: 30
+  # 验证码最大错误次数（超过后锁定）
+  max-fail-count: 5
+  # 锁定时长（秒）
+  lock-seconds: 1800
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.campus.smart.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# JWT 配置
+jwt:
+  secret: smartcampussecretkey2026
+  expiration: 86400000
+  header: Authorization
+
+# Redis 缓存前缀
+cache:
+  prefix:
+    goods: "campus:goods:"
+    post: "campus:post:"
+    user: "campus:user:"
+
+# Python AI 服务地址
+ai-service:
+  base-url: http://localhost:8000
+
+# Knife4j 文档
+knife4j:
+  enable: true
+  setting:
+    language: zh-cn
+
+# Springdoc OpenAPI 配置
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  # 扫描所有 controller 包
+  packages-to-scan: com.campus.smart.controller
+
+logging:
+  level:
+    com.campus.smart: debug

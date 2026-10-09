@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#g3)"/>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-size="38" font-family="Microsoft YaHei, sans-serif" font-weight="bold">🎉 校园歌手大赛</text>
+  <text x="400" y="175" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="20" font-family="Microsoft YaHei, sans-serif">报名火热进行中，千元大奖等你来</text>
+  <text x="400" y="215" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="16" font-family="Microsoft YaHei, sans-serif">报名截止：10月15日 · 大礼堂</text>
+  <rect x="300" y="240" width="200" height="40" rx="20" fill="white" fill-opacity="0.25"/>
+  <text x="400" y="267" text-anchor="middle" fill="white" font-size="16" font-family="Microsoft YaHei, sans-serif" font-weight="bold">马上报名 →</text>
+</svg>

@@ -1,0 +1,54 @@
+-- 补充缺失的外键（第一次执行时卡住的部分）
+
+-- comment 自引用
+ALTER TABLE comment ADD CONSTRAINT fk_comment_parent FOREIGN KEY (parent_id) REFERENCES comment (id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE comment ADD CONSTRAINT fk_comment_reply_user FOREIGN KEY (reply_user_id) REFERENCES user (id) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- 点赞记录
+ALTER TABLE like_record ADD CONSTRAINT fk_like_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- 商品
+ALTER TABLE goods ADD CONSTRAINT fk_goods_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE goods ADD CONSTRAINT fk_goods_category FOREIGN KEY (category_id) REFERENCES category (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 活动
+ALTER TABLE activity ADD CONSTRAINT fk_activity_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 活动报名
+ALTER TABLE activity_signup ADD CONSTRAINT fk_signup_activity FOREIGN KEY (activity_id) REFERENCES activity (id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE activity_signup ADD CONSTRAINT fk_signup_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 跑腿
+ALTER TABLE errand_order ADD CONSTRAINT fk_errand_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE errand_order ADD CONSTRAINT fk_errand_runner FOREIGN KEY (runner_id) REFERENCES user (id) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- 快递
+ALTER TABLE express_order ADD CONSTRAINT fk_express_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE express_order ADD CONSTRAINT fk_express_picker FOREIGN KEY (picker_id) REFERENCES user (id) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- 代课
+ALTER TABLE substitute_order ADD CONSTRAINT fk_substitute_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE substitute_order ADD CONSTRAINT fk_substitute_sub FOREIGN KEY (substitute_id) REFERENCES user (id) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- 游戏搭子
+ALTER TABLE game_buddy ADD CONSTRAINT fk_game_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 失物招领
+ALTER TABLE lost_found ADD CONSTRAINT fk_lost_found_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 打印
+ALTER TABLE print_order ADD CONSTRAINT fk_print_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 反馈
+ALTER TABLE feedback ADD CONSTRAINT fk_feedback_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE feedback ADD CONSTRAINT fk_feedback_admin FOREIGN KEY (reply_admin_id) REFERENCES admin (id) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- 消息
+ALTER TABLE message ADD CONSTRAINT fk_message_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- 聊天消息
+ALTER TABLE chat_message ADD CONSTRAINT fk_chat_from_user FOREIGN KEY (from_user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE chat_message ADD CONSTRAINT fk_chat_to_user FOREIGN KEY (to_user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- 操作日志
+ALTER TABLE oper_log ADD CONSTRAINT fk_oper_log_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE SET NULL ON UPDATE CASCADE;

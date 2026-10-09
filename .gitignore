@@ -1,0 +1,38 @@
+# ===== Java / Spring Boot =====
+backend/target/
+backend/.mvn/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ===== 本地私密配置（邮箱授权码等，绝不入库） =====
+backend/src/main/resources/application-local.yml
+application-local.yml
+
+# ===== Node / 前端 =====
+frontend/node_modules/
+admin/node_modules/
+frontend/dist/
+admin/dist/
+*.log
+npm-debug.log*
+
+# ===== IDE =====
+.idea/
+*.iml
+.vscode/
+.hbuilderx/
+
+# ===== 项目工具目录（含内网脚本、日志等） =====
+.build/
+
+# ===== Redis（Windows 版本二进制，不进库） =====
+Redis/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+# ===== ������������/��������/��ʷ�к� =====
+nginx-1.24.0/
+miniprogram/
+backend/__t.txt

@@ -1,0 +1,21 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+dist-ssr/
+
+# esbuild 临时目录（vite.config.js 中指定，规避 Windows 临时目录权限问题）
+.tmp-esbuild/
+
+# 编辑器/系统
+.DS_Store
+.idea/
+.vscode/
+*.local
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

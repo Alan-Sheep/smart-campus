@@ -1,0 +1,240 @@
+/* ============================================================
+   智慧校园管理后台 - 全局样式
+   设计基调：清爽现代、卡片化、主色紫蓝渐变
+   ============================================================ */
+
+:root {
+  /* 主色（与用户端一致：#6c4ee6 → #8b5cf6） */
+  --sc-primary: #6c4ee6;
+  --sc-primary-light: #8b5cf6;
+  --sc-primary-soft: #f1edfd;
+  --sc-gradient: linear-gradient(135deg, #6c4ee6 0%, #8b5cf6 100%);
+
+  /* 语义色 */
+  --sc-success: #18a058;
+  --sc-warning: #f0a020;
+  --sc-danger: #d03050;
+  --sc-info: #2080f0;
+
+  /* 中性色 */
+  --sc-text: #1f2430;
+  --sc-text-regular: #4b5563;
+  --sc-text-secondary: #8b93a5;
+  --sc-border: #ebeef5;
+  --sc-bg: #f4f6fb;
+  --sc-card: #ffffff;
+
+  --sc-radius: 14px;
+  --sc-radius-sm: 10px;
+  --sc-shadow: 0 2px 12px rgba(31, 36, 48, 0.06);
+  --sc-shadow-hover: 0 8px 24px rgba(108, 78, 230, 0.14);
+
+  /* 覆盖 Element Plus 主题色 */
+  --el-color-primary: #6c4ee6;
+  --el-color-primary-light-3: #9179ec;
+  --el-color-primary-light-5: #a996f1;
+  --el-color-primary-light-7: #c2b4f6;
+  --el-color-primary-light-8: #cfc4f8;
+  --el-color-primary-light-9: #f1edfd;
+  --el-color-primary-dark-2: #583cd0;
+  --el-border-radius-base: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--sc-text);
+  background: var(--sc-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 滚动条美化 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d5d9e5;
+  border-radius: 4px;
+
+  &:hover {
+    background: #b9c0d1;
+  }
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- 通用页面容器 ---------- */
+.page-container {
+  padding: 20px;
+}
+
+/* 页面头部：标题 + 操作按钮 */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  .page-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--sc-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 18px;
+      border-radius: 2px;
+      background: var(--sc-gradient);
+    }
+  }
+
+  .page-desc {
+    font-size: 13px;
+    color: var(--sc-text-secondary);
+    margin: 6px 0 0 12px;
+  }
+}
+
+/* 卡片 */
+.sc-card {
+  background: var(--sc-card);
+  border-radius: var(--sc-radius);
+  box-shadow: var(--sc-shadow);
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(235, 238, 245, 0.9);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* 搜索筛选区 */
+.filter-bar {
+  background: var(--sc-card);
+  border-radius: var(--sc-radius);
+  box-shadow: var(--sc-shadow);
+  padding: 18px 20px 2px;
+  margin-bottom: 16px;
+
+  .el-form-item {
+    margin-bottom: 16px;
+  }
+}
+
+/* 表格卡片 */
+.table-card {
+  background: var(--sc-card);
+  border-radius: var(--sc-radius);
+  box-shadow: var(--sc-shadow);
+  padding: 8px 20px 20px;
+
+  .el-table {
+    --el-table-border-color: #f2f4f9;
+    --el-table-header-bg-color: #fafbfe;
+
+    th.el-table__cell {
+      font-weight: 600;
+      color: var(--sc-text-regular);
+      background: #fafbfe !important;
+    }
+
+    .el-table__row:hover > td.el-table__cell {
+      background: var(--sc-primary-soft) !important;
+    }
+  }
+}
+
+/* 分页 */
+.pagination-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+/* 状态标签统一圆角 */
+.el-tag {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* 按钮渐变主色（用于主要操作） */
+.el-button--primary {
+  --el-button-bg-color: var(--sc-primary);
+  --el-button-border-color: var(--sc-primary);
+  --el-button-hover-bg-color: var(--sc-primary-light);
+  --el-button-hover-border-color: var(--sc-primary-light);
+}
+
+/* 图片缩略图 */
+.thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--sc-border);
+  background: #f7f8fc;
+  cursor: pointer;
+}
+
+/* 空状态 */
+.el-table__empty-block {
+  min-height: 180px;
+}
+
+/* 文本工具类 */
+.text-secondary {
+  color: var(--sc-text-secondary);
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+/* 详情描述列表紧凑化 */
+.detail-desc {
+  .el-descriptions__label {
+    width: 110px;
+    color: var(--sc-text-secondary);
+  }
+}
+
+/* 页面切换动画 */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}

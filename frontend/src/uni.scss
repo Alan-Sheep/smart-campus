@@ -1,0 +1,46 @@
+/* 全局scss变量 */
+/* 主题色 */
+$primary-color: #6c4ee6;
+$primary-light: #8b75f0;
+$primary-dark: #5a3dd4;
+
+/* 辅助色 */
+$success-color: #52c41a;
+$warning-color: #faad14;
+$error-color: #ff4d4f;
+$info-color: #1890ff;
+
+/* 文字颜色 */
+$text-primary: #333333;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #c0c4cc;
+
+/* 背景色 */
+$bg-color: #f5f5f7;
+$bg-white: #ffffff;
+$bg-gray: #f0f2f5;
+
+/* 边框色 */
+$border-color: #e4e7ed;
+$border-light: #ebeef5;
+
+/* 间距 */
+$spacing-xs: 10rpx;
+$spacing-sm: 20rpx;
+$spacing-md: 30rpx;
+$spacing-lg: 40rpx;
+
+/* 圆角 */
+$radius-sm: 8rpx;
+$radius-md: 16rpx;
+$radius-lg: 24rpx;
+$radius-xl: 32rpx;
+
+/* 字体大小 */
+$font-size-xs: 22rpx;
+$font-size-sm: 24rpx;
+$font-size-base: 28rpx;
+$font-size-md: 30rpx;
+$font-size-lg: 32rpx;
+$font-size-xl: 36rpx;

@@ -1,0 +1,2519 @@
+<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+  <w:body>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:noProof/>
+        </w:rPr>
+        <mc:AlternateContent>
+          <mc:Choice Requires="wps">
+            <w:drawing>
+              <wp:inline distT="0" distB="0" distL="0" distR="0">
+                <wp:extent cx="2400000" cy="380000"/>
+                <wp:effectExtent l="0" t="0" r="0" b="0"/>
+                <wp:docPr id="1" name="AILabel"/>
+                <wp:cNvGraphicFramePr/>
+                <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                  <a:graphicData uri="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+                    <wps:wsp>
+                      <wps:cNvSpPr txBox="1"/>
+                      <wps:spPr>
+                        <a:xfrm>
+                          <a:off x="0" y="0"/>
+                          <a:ext cx="2400000" cy="380000"/>
+                        </a:xfrm>
+                        <a:prstGeom prst="rect">
+                          <a:avLst/>
+                        </a:prstGeom>
+                        <a:solidFill>
+                          <a:srgbClr val="000000">
+                            <a:alpha val="50000"/>
+                          </a:srgbClr>
+                        </a:solidFill>
+                        <a:ln w="12700">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                        </a:ln>
+                      </wps:spPr>
+                      <wps:txbx>
+                        <w:txbxContent>
+                          <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+                            <w:pPr>
+                              <w:jc w:val="center"/>
+                            </w:pPr>
+                            <w:r>
+                              <w:rPr>
+                                <w:rFonts w:eastAsia="宋体"/>
+                                <w:b/>
+                                <w:color w:val="FFFFFF"/>
+                                <w:sz w:val="28"/>
+                                <w:szCs w:val="28"/>
+                              </w:rPr>
+                              <w:t>含 AI 生成</w:t>
+                            </w:r>
+                            
+                            
+                          </w:p>
+                        </w:txbxContent>
+                      </wps:txbx>
+                      <wps:bodyPr lIns="91440" tIns="45720" rIns="91440" bIns="45720" anchor="ctr" anchorCtr="0">
+                        <a:noAutofit/>
+                      </wps:bodyPr>
+                    </wps:wsp>
+                  </a:graphicData>
+                </a:graphic>
+              </wp:inline>
+            </w:drawing>
+          </mc:Choice>
+          <mc:Fallback>
+            <w:pict>
+              <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+                <v:stroke joinstyle="miter"/>
+                <v:path gradientshapeok="t" o:connecttype="rect"/>
+              </v:shapetype>
+              <v:shape id="AILabel" o:spid="_x0000_s1026" type="#_x0000_t202" style="width:189pt;height:29.9pt;visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;mso-position-horizontal-relative:char;mso-position-vertical:absolute;mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;v-text-anchor:middle" o:gfxdata="UEsDBBQABgAIAAAAIQC2gziS/gAAAOEBAAATAAAAW0NvbnRlbnRfVHlwZXNdLnhtbJSRQU7DMBBF 90jcwfIWJU67QAgl6YK0S0CoHGBkTxKLZGx5TGhvj5O2G0SRWNoz/78nu9wcxkFMGNg6quQqL6RA 0s5Y6ir5vt9lD1JwBDIwOMJKHpHlpr69KfdHjyxSmriSfYz+USnWPY7AufNIadK6MEJMx9ApD/oD OlTrorhX2lFEilmcO2RdNtjC5xDF9pCuTyYBB5bi6bQ4syoJ3g9WQ0ymaiLzg5KdCXlKLjvcW893 SUOqXwnz5DrgnHtJTxOsQfEKIT7DmDSUCaxw7Rqn8787ZsmRM9e2VmPeBN4uqYvTtW7jvijg9N/y JsXecLq0q+WD6m8AAAD//wMAUEsDBBQABgAIAAAAIQA4/SH/1gAAAJQBAAALAAAAX3JlbHMvLnJl bHOkkMFqwzAMhu+DvYPRfXGawxijTi+j0GvpHsDYimMaW0Yy2fr2M4PBMnrbUb/Q94l/f/hMi1qR JVI2sOt6UJgd+ZiDgffL8ekFlFSbvV0oo4EbChzGx4f9GRdb25HMsYhqlCwG5lrLq9biZkxWOiqY 22YiTra2kYMu1l1tQD30/bPm3wwYN0x18gb45AdQl1tp5j/sFB2T0FQ7R0nTNEV3j6o9feQzro1i OWA14Fm+Q8a1a8+Bvu/d/dMb2JY5uiPbhG/ktn4cqGU/er3pcvwCAAD//wMAUEsDBBQABgAIAAAA IQB86hAd2wEAANYDAAAOAAAAZHJzL2Uyb0RvYy54bWysU11v2yAUfZ+0/4B4X+x46dpZcaquVaZK 1Tap2w/AGGIk4CKgsfPvd8Fu6q7SHqbxQLgfPveec2+216PR5Ch8UGAbul6VlAjLoVP20NBfP/cf rigJkdmOabCioScR6PXu/bvt4GpRQQ+6E54giA314Brax+jqogi8F4aFFThhMSjBGxbR9Iei82xA dKOLqiw/FQP4znngIgT03k1Busv4Ugoev0sZRCS6odhbzLfPd5vuYrdl9cEz1ys+t8H+oQvDlMWi Z6g7Fhl58uoNlFHcQwAZVxxMAVIqLjIHZLMu/2Dz2DMnMhcUJ7izTOH/wfJvxx+eqA5nR4llBkd0 c//AWqGTNIMLNWY8OsyJ4xcYU9rsD+hMjEfpTfpFLgTjKPLpLKwYI+HorDZlOpRwjH28ym+EKV6+ dj7ErwIMSY+Gehxc1pMdH0KcUp9TUrEAWnV7pXU2/KG91Z4cWRpyPtO32vVs8l4sSoYpPZd/haMt GZBgdYmd/r3IPp+kBFJYYKClLTqTbpM+6RXHdpxFa6E7oZb63uIMP683m7ST2dhcXFZo+GWkXUaY 5T3g5vLoKZmM25g3OfVq4eYpglRZq1R0qjT3gsuTW50XPW3n0s5ZL3/H3W8AAAD//wMAUEsDBBQA BgAIAAAAIQB1wTYt2wAAAAQBAAAPAAAAZHJzL2Rvd25yZXYueG1sTI9BS8NAEIXvgv9hGcGb3TVa TWM2RQoq7UmrCL1ts2MSzM6G7DZJ/72jl3p58HjDe9/ky8m1YsA+NJ40XM8UCKTS24YqDR/vT1cp iBANWdN6Qg1HDLAszs9yk1k/0hsO21gJLqGQGQ11jF0mZShrdCbMfIfE2ZfvnYls+0ra3oxc7lqZ KHUnnWmIF2rT4arG8nt7cBqqTXJcq5VNnlV4ScfX2/VnM+y0vryYHh9ARJzi6Rh+8RkdCmba+wPZ IFoN/Ej8U85u7lO2ew3zRQqyyOV/+OIHAAD//wMAUEsBAi0AFAAGAAgAAAAhALaDOJL+AAAA4QEA ABMAAAAAAAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwECLQAUAAYACAAAACEAOP0h /9YAAACUAQAACwAAAAAAAAAAAAAAAAAvAQAAX3JlbHMvLnJlbHNQSwECLQAUAAYACAAAACEAfOoQ HdsBAADWAwAADgAAAAAAAAAAAAAAAAAuAgAAZHJzL2Uyb0RvYy54bWxQSwECLQAUAAYACAAAACEA dcE2LdsAAAAEAQAADwAAAAAAAAAAAAAAAAA1BAAAZHJzL2Rvd25yZXYueG1sUEsFBgAAAAAEAAQA 8wAAAD0FAAAAAA== " fillcolor="black" strokecolor="white" strokeweight="1pt">
+                <v:fill opacity="32896f"/>
+                <v:textbox>
+                  <w:txbxContent>
+                    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+                      <w:pPr>
+                        <w:jc w:val="center"/>
+                      </w:pPr>
+                      <w:r>
+                        <w:rPr>
+                          <w:rFonts w:eastAsia="宋体"/>
+                          <w:b/>
+                          <w:color w:val="FFFFFF"/>
+                          <w:sz w:val="28"/>
+                          <w:szCs w:val="28"/>
+                        </w:rPr>
+                        <w:t>含 AI 生成</w:t>
+                      </w:r>
+                      
+                      
+                    </w:p>
+                  </w:txbxContent>
+                </v:textbox>
+                <w10:anchorlock/>
+              </v:shape>
+            </w:pict>
+          </mc:Fallback>
+        </mc:AlternateContent>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="001350C1"/>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:pPr>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="1F4E79"/>
+          <w:sz w:val="52"/>
+          <w:szCs w:val="52"/>
+        </w:rPr>
+        <w:t>Java 开发面试八股文</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="30"/>
+          <w:szCs w:val="30"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:pPr>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+          <w:color w:val="666666"/>
+          <w:sz w:val="28"/>
+          <w:szCs w:val="28"/>
+        </w:rPr>
+        <w:t>准备充实 面试不慌</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:pPr>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+          <w:color w:val="888888"/>
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+        <w:t>覆盖 Java基础 / 集合 / 多线程 / JVM / Spring / MyBatis / MySQL / Redis / 算法</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:sz w:val="40"/>
+          <w:szCs w:val="40"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:pPr>
+        <w:jc w:val="center"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+          <w:color w:val="AAAAAA"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>内部学习参考 · 持续更新</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:br w:type="page"/>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+      </w:pPr>
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t>目录</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>1. Java 基础</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>2. Java 集合框架</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>3. Java 多线程与并发</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>4. JVM 虚拟机</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>5. Spring / Spring Boot / Spring MVC</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>6. MyBatis</w:t>
+      </w:r>
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>7. MySQL 数据库</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>8. Redis 缓存</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>9. 微服务与分布式</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:eastAsia="Microsoft YaHei"/>
+        </w:rPr>
+        <w:t>10. 设计模式与算法</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRDefault="00CB401E">
+      <w:r>
+        <w:br w:type="page"/>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t xml:space="preserve">1.Java </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>基础</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Java </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>语言特点</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Java 是面向对象语言，写好的代码编译成字节码，依靠 JVM 实现跨平台；自带垃圾回收，不用我们手动释放内存；取消指针，相对更安全。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>面向对象三大特性</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="3"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>封装</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：把类里面的数据保护起来，不让外部随便修改，对外只提供方法访问。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="3"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>继承</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：子类复用父类已经写好的代码，减少重复开发，Java 只支持单继承。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="3"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>多态</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：同一个方法，不同对象执行出来效果不一样，方便后期扩展功能。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>抽象类和接口</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>抽象类相当于一个模板，可以有普通变量，一个类只能继承一个抽象类。 接口主要用来定一套行为规范，一个类可以实现多个接口。JDK8 之后接口也可以写带逻辑的 default 方法。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>重载和重写</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="4"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>重载</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：同一个类里面，方法名字一样，传入的参数不一样，用来适配多种入参。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="4"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>重写</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：发生在父子类，子类把父类的方法重新实现一遍。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t>String</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>、</w:t>
+      </w:r>
+      
+      <w:r>
+        <w:t>StringBuilder</w:t>
+      </w:r>
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>、</w:t>
+      </w:r>
+      
+      <w:r>
+        <w:t>StringBuffer</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>String 字符串是不可变的，做字符串拼接会不断产生新对象，适合少量拼接。 StringBuilder 单线程下用，性能高；StringBuffer 加了锁，多线程环境才用，性能会差一点。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">== </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>和</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> equals</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>==</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：基本类型比的是值；引用类型比的是对象的内存地址。 equals 默认也是比较地址，像 String 这类类重写之后，就用来比较字符串内容。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>异常</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Error 是严重系统错误，我们程序处理不了； Exception 分为运行时异常（空指针、数组越界，编译不报错）和受检异常（IO 异常，编译就要处理）。 try</w:t>
+      <w:noBreakHyphen/><w:t>catch 捕获异常，</w:t></w:r>
+      
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>finally 里面的代码无论报不报错都会执行</w:t>
+      </w:r>
+      <w:r>
+        <w:t>。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Java8 </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>新特性</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>用到比较多的：Lambda 简化代码；Stream 方便处理集合；Optional 用来避免空指针；接口支持 default 方法。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">2.Java </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>集合框架</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>集合主要两大块：Collection 存单个对象，Map 存键值对。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t xml:space="preserve">ArrayList </w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>和</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> LinkedList</w:t>
+      </w:r>
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>ArrayList 底层是数组，查询快，但是头部增删元素需要移动大量数据；初始容量 10，满了就扩容到 1.5 倍。 LinkedList 是双向链表，查询慢，但是头尾新增、删除数据效率高。两个都不是线程安全。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+      <w:bookmarkEnd w:id="0"/>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:bookmarkStart w:id="1" w:name="OLE_LINK1"/>
+      <w:bookmarkStart w:id="2" w:name="OLE_LINK2"/>
+      
+      <w:r>
+        <w:t>HashMap</w:t>
+      </w:r>
+      <w:bookmarkEnd w:id="1"/>
+      <w:bookmarkEnd w:id="2"/>
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>（答辩重点）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>JDK1.8 底层：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>数组 + 链表 + 红黑树</w:t>
+      </w:r>
+      <w:r>
+        <w:t>。 链表长度超过 8，并且数组容量大于等于 64，链表就转为红黑树，提高查询速度；节点变少到 6 再退回链表。 存放数据的时候先算 key 的哈希值，找到数组位置；key 相同就覆盖，不同就挂链表或者红黑树；容量达到阈值就扩容，扩大两倍。 HashSet 底层就是 HashMap，利用 key 不可重复实现元素去重。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>ConcurrentHashMap</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>用来多线程环境使用。1.7 用分段锁；1.8 改成 CAS 加 synchronized 锁链表头节点，锁粒度更小，并发性能更好。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">3. </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>多线程（答辩简化，不深挖</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> AQS</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="5"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>创建线程三种方式：继承 Thread 类；实现 Runnable 接口；实现 Callable 可以拿到返回结果。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="5"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>volatile：保证多线程之间数据可见，禁止指令重排，</w:t>
+      </w:r>
+      
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>但是不能保证操作原子性</w:t>
+      </w:r>
+      <w:r>
+        <w:t>。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="5"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>synchronized：加锁，保证多线程下数据安全，执行完自动释放锁。</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="5"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>ThreadLocal：每个线程存自己独立的数据；用完要调用 remove，不然容易内存泄漏。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>我的项目里面 SSE、消息推送会涉及到多线程场景。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">4.JVM </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>虚拟机</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="6"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>JVM 内存分为 5 块：</w:t>
+      </w:r>
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="7"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>堆：存放所有 new 出来的对象，GC 垃圾回收主要操作这里，线程共享。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="7"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>方法区（JDK8 叫元空间）：存类信息、静态变量。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="7"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>虚拟机栈、本地方法栈：线程私有，存局部变量。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="7"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>程序计数器：记录代码执行到第几行。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="8"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>垃圾回收 GC：采用</w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>可达性分析</w:t>
+      </w:r>
+      <w:r>
+        <w:t>，从 GC Roots 出发，访问不到的对象就会被回收。</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="8"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>堆分为新生代、老年代；新对象优先分配新生代，存活时间久就移到老年代。</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="8"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>双亲委派：加载类优先交给父类加载器，好处是防止核心类被篡改，避免重复加载。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>5.Spring / SpringBoot / SpringMVC</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">IOC </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>和</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> DI</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>IOC 控制反转：把对象创建、依赖管理交给 Spring 容器，不再自己 new 对象。 DI 依赖注入，就是容器把需要的对象自动注入进来，常用构造器、setter、@Autowired 字段注入。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">AOP </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>面向切面编程</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t>把日志、权限这类通用逻辑抽离出来，不和业务代码写在一起，实现解耦。 底层靠动态代理：类实现接口就用 JDK 代理；没有接口就用 CGLIB 生成子类代理。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Bean </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>生命周期</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>创建对象 → 给属性赋值 → 执行初始化方法 → 程序中使用 → 容器关闭执行销毁。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Bean </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>作用域</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>singleton 单例：整个容器就这一个对象，默认；prototype 每次获取都会新建对象。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t xml:space="preserve">SpringBoot </w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>自动装配</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>@SpringBootApplication</w:t>
+      </w:r>
+      
+      
+      
+      <w:r>
+        <w:t>组合了三个注解：扫描组件、配置类、开启自动装配。 自动装配会读取配置，根据条件注解，按需创建需要的 Bean，不用手动写大量配置。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t xml:space="preserve">SpringMVC </w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>执行流程</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>请求先到 DispatcherServlet 前端控制器，找到对应的 Controller，执行业务方法；前后端分离项目直接返回 JSON 数据。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">Filter </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>过滤器和</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> Interceptor </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>拦截器</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Filter 属于 Servlet，最先执行，可以拦截全部请求； Interceptor 是 SpringMVC 提供，只拦截 Controller 接口，可以拿到 Spring 容器里面的 Bean。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">@Transactional </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>事务</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>默认传播行为 REQUIRED，有事务就加入，没有就新建事务。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>事务容易失效的几种情况：</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="9"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>方法不是 public；</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="9"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>同一个类里面内部调用，不走代理；</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="9"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>try</w:t>
+      <w:noBreakHyphen/><w:t>catch 把异常吃掉，没有向外抛出；</w:t></w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="9"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>没有配置 rollbackFor，只对运行时异常回滚。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>6.MyBatis</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="10"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>#{}</w:t>
+      </w:r>
+      <w:r>
+        <w:t>预编译，防止 SQL 注入，平时传参数优先用这个；</w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>${}</w:t>
+      </w:r>
+      <w:r>
+        <w:t>直接字符串拼接，有注入风险，只适合动态传表名、排序字段。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="10"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>动态 SQL：</w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>&lt;if&gt;</w:t>
+      </w:r>
+      <w:r>
+        <w:t>、</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>&lt;where&gt;</w:t>
+      </w:r>
+      <w:r>
+        <w:t>、</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>&lt;set&gt;</w:t>
+      </w:r>
+      <w:r>
+        <w:t>、</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="HTML"/>
+        </w:rPr>
+        <w:t>&lt;foreach&gt;</w:t>
+      </w:r>
+      
+      
+      
+      
+      <w:r>
+        <w:t>，用来拼接条件多变的 SQL。</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="10"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>resultType：数据库字段和实体类名字匹配直接用； resultMap：字段名对不上的时候手动映射，支持一对多关联查询。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="10"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>一级缓存同一个 SqlSession 生效；二级缓存 Mapper 级别，需要手动开启。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="10"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>PageHelper 分页插件：底层在 SQL 末尾拼接 limit，同时执行 count 统计总条数。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">7.MySQL </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>数据库</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>索引</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> B + </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>树</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:lastRenderedPageBreak/>
+        <w:t>InnoDB 索引用 B + 树结构。非叶子节点只存索引；叶子节点保存真实数据，并且连成链表，做范围查询效率很高。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="11"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>聚簇索引（主键索引）：叶子节点存一整行完整数据；</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="11"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>普通二级索引：叶子只存主键，查询完还需要回表拿完整数据。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>索引失效常见情况：like 开头写百分号、索引列做函数运算、类型不匹配、不满足联合索引最左前缀。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>事务</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> ACID</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>原子性、一致性、隔离性、持久性。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="12"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>原子性：事务要么全部成功，要么全部回滚；</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="12"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>持久性：提交之后数据永久保存。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>隔离级别</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>MySQL 默认是</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>可重复读 RR</w:t>
+      </w:r>
+      <w:r>
+        <w:t>。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="13"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>脏读：读到别的事务还没提交的数据；</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="13"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>不可重复读：同一事务，两次读取，别的事务提交修改，数据前后不一样；</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="13"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>幻读：范围查询，别的事务新增删除，返回的行数发生变化； InnoDB 在 RR 级别依靠 MVCC 加上间隙锁解决幻读。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">MVCC </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>多版本并发控制</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>多版本并发控制，不加锁完成读操作，保存数据历史版本，判断版本对当前事务是否可见。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">SQL </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>优化思路</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>用 explain 看 SQL 执行计划；不要写 select *；查询、排序字段合理建索引；避免索引上做运算；大偏移量分页做特殊优化。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">8.Redis </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>缓存（答辩重点，我的两个项目都使用）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>五种常用数据类型和场景</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="14"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>String 字符串：普通缓存、计数器、简单分布式锁；</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="14"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Hash：适合存对象；</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="14"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>List 链表：可以做简易消息队列；</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="14"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>Set 集合：去重，求交集并集；</w:t>
+      </w:r>
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="14"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t>ZSet 有序集合：排行榜。</w:t>
+      </w:r>
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>常用命令：set、get、setex、setnx；hset、hget、hkeys、hvals；llen、lpush、rpop、lrange；sadd、scard、sinter、sunion、srem。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>缓存三大问题</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="15"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>缓存穿透</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：查询数据库根本不存在的数据，请求全部打到数据库。简单方案：缓存空值。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="15"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:lastRenderedPageBreak/>
+        <w:t>缓存击穿</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：某个很热门的 key 过期，大量请求瞬间打到数据库；方案：热点 key 设置永不过期或者加互斥锁。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="15"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>缓存雪崩</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：大批量 key 同一时间过期，数据库压力暴涨；方案：过期时间加上随机数，错开过期时间。</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:t xml:space="preserve">Redis </w:t>
+      </w:r>
+      
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>持久化</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="aa"/>
+      </w:pPr>
+      <w:r>
+        <w:t>RDB 快照，把整体数据保存一份，恢复快，但故障会丢一部分数据； AOF 记录每一条写指令，数据更安全，但是文件体积大；新版本支持混合持久化，结合两者优点。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">9. </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>常用设计模式（答辩记住</w:t>
+      </w:r>
+      <w:r>
+        <w:t xml:space="preserve"> 4 </w:t>
+      </w:r>
+      
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>个即可）</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="16"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>单例模式</w:t>
+      </w:r>
+      
+      <w:r>
+        <w:t>：整个项目只创建一个实例对象。</w:t>
+      </w:r>
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="16"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>工厂模式</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：统一负责对象创建，Spring 里面 BeanFactory 就是工厂模式。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="16"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>代理模式</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：SpringAOP 底层就是代理模式，在原有方法前后增加额外逻辑。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="16"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rStyle w:val="ab"/>
+        </w:rPr>
+        <w:t>策略模式</w:t>
+      </w:r>
+      <w:r>
+        <w:t>：同一套行为，多种不同算法实现，方便切换。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+      </w:pPr>
+      <w:r>
+        <w:t xml:space="preserve">10. </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+        </w:rPr>
+        <w:t>答辩答题小技巧（口述）</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="17"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>回答技术问题先说结论，再简单解释，不要堆砌底层源码细节。</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="17"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>尽量结合自己项目：比如问到 Redis，就说我项目里面用 Redis 缓存什么数据，解决了什么问题，带来什么提升（比如我项目首屏性能提升 40%）。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="17"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>遇到不会的问题不要瞎编，可以说这块我了解不多，但是我熟悉相关的 XX 知识点。</w:t>
+      </w:r>
+      
+      
+    </w:p>
+    <w:p w:rsidR="00F143EC" w:rsidRDefault="00F143EC" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:widowControl/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="17"/>
+        </w:numPr>
+        <w:spacing w:before="100" w:beforeAutospacing="1" w:after="100" w:afterAutospacing="1"/>
+        <w:jc w:val="left"/>
+      </w:pPr>
+      <w:r>
+        <w:t>项目介绍可以简单套用：项目要解决什么问题 → 我负责哪些模块 → 使用什么技术、解决了哪些难点 → 最终效果。</w:t>
+      </w:r>
+      
+      
+      
+      
+      
+      
+    </w:p>
+    <w:p w:rsidR="001350C1" w:rsidRPr="00F143EC" w:rsidRDefault="001350C1" w:rsidP="00F143EC">
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+      </w:pPr>
+    </w:p>
+    <w:p><w:r><w:br w:type="page"/></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="1"/><w:spacing w:before="400" w:after="200"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="36"/><w:szCs w:val="36"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">11. 消息队列（MQ）面试 20 问</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第一层：基础概念</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q1：什么是消息队列？为什么要用？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">消息队列就是一个存消息的队列，生产者往里发，消费者从里取。用它主要三个好处：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 解耦：下单不用等发短信，订单系统只管发消息，通知系统自己消费</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 异步：用户下单后马上返回，扣库存、发短信、发通知后台慢慢做</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 削峰：秒杀瞬间几万请求进来，先存队列里，后端慢慢消化，不打垮数据库</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q2：你项目里哪里用到了消息队列？具体场景说一下</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">我们智慧校园项目里可以用在这几个地方：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 订单通知：用户下单后发消息到队列，通知系统发短信/推送</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 点赞/评论通知：用户点赞后异步生成互动消息，不影响主流程</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 数据同步：比如用户发布帖子，异步同步到搜索服务</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">不过我们现在是单体项目，量不大，所以暂时直接存数据库了。如果量大了肯定要引入消息队列解耦。</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第二层：技术选型</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q3：常见的消息队列有哪些？你们选的哪个？为什么？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">主流的有 RabbitMQ、RocketMQ、Kafka、Pulsar。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. RabbitMQ：Erlang 写的，功能全，延时低，但吞吐量一般，适合中小项目</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. RocketMQ：阿里开源的，Java 写的，高吞吐、功能丰富，适合电商场景</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. Kafka：Scala 写的，超高吞吐，主要用在大数据、日志采集</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. Pulsar：比较新，存算分离架构，云原生友好</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">如果是我们这个智慧校园项目，我选 RabbitMQ，因为功能全、社区成熟、业务量不大也够用。如果后续用户量上来了再考虑 RocketMQ。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q4：RabbitMQ 和 Kafka 的区别？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 吞吐量：RabbitMQ 万级，Kafka 十万级甚至百万级</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 延时：RabbitMQ 微秒级，Kafka 毫秒级</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 消息模型：RabbitMQ 是交换机+队列，灵活；Kafka 是 Topic+分区，简单</w:t></w:r></w:p><w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. 适用场景：RabbitMQ 适合业务系统；Kafka 适合日志、大数据、流处理</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">简单说：业务系统用 RabbitMQ，日志/大数据用 Kafka。</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第三层：核心原理</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q5：RabbitMQ 的架构是什么样的？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">RabbitMQ 核心组件：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. Producer：生产者，发消息的</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. Broker：RabbitMQ 服务器，里面有 Virtual Host（虚拟主机，做隔离）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. Exchange：交换机，接收生产者的消息，根据路由键转发到队列</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. Queue：队列，存消息的地方</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  5. Binding：绑定，交换机和队列之间的绑定关系</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  6. Consumer：消费者，从队列拿消息的</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">交换机有四种类型：Direct（完全匹配）、Fanout（广播）、Topic（通配符匹配）、Headers（按消息头匹配，用得少）。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q6：消息怎么保证不丢？（消息可靠性）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">要从三个环节保证：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 生产者到Broker（生产端确认）：开启 Confirm 模式，消息到了 Broker 会给生产者回 ack；如果没到，生产者重发</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. Broker 内部（持久化）：队列持久化 + 消息持久化 + 交换机持久化，还要开镜像队列，多副本防止单节点挂了</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. Broker到消费者（消费端确认）：不用自动 ack，改成手动 ack，消费者处理完业务逻辑再 ack；如果消费者挂了，消息会重新入队</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q7：手动 ack 的时候，如果业务处理一半报错了怎么办？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">分两种情况处理：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 可重试的错误（比如网络抖动、数据库临时不可用）：调用 basicNack 或 basicReject，把消息重新入队，稍后再试</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 不可重试的错误（比如消息格式错了）：不能一直重试，要记录日志，然后进死信队列，人工介入处理</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">还要注意：重试要有次数限制，不然会无限循环占满队列。一般重试 3 次，还失败就进死信队列。</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第四层：进阶问题</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q8：消息重复消费怎么解决？（幂等性）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">消息队列保证至少投递一次，所以重复是难免的，关键是消费端要做幂等。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 数据库唯一键：比如订单号做唯一索引，重复插入会报错，直接忽略</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. Redis 去重：用消息 ID 存 Redis，消费前先判断有没有消费过</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 状态机幂等：比如订单状态只能从待支付到已支付，重复的更新直接拒绝</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">我们项目里发通知的话，用消息 ID + Redis 做去重就行；订单状态变更用状态机更稳妥。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q9：消息积压了怎么办？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">先看是消费者挂了还是消费太慢：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 紧急处理：先加消费者实例提高消费能力；如果消息太多队列快满了，先把消息转存到别的地方，先让主流程恢复</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 长期优化：优化消费逻辑减少单次消费时间；增加分区/队列数提高并行度；排查是不是有慢 SQL 或者第三方接口超时；设置合理的 TTL，过期消息进死信队列</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q10：死信队列是什么？什么情况下消息会进死信队列？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">死信队列就是消息死掉后去的地方，专门用来处理异常消息。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 消息被 nack/reject 并且 requeue=false</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 消息 TTL 过期了（超过存活时间）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 队列满了（达到最大长度），最早的消息被挤出去</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">死信队列的消息不能丢，要有专人定期查看和处理，比如人工补偿、告警通知。</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第五层：深入拷打</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q11：RabbitMQ 怎么保证消息顺序？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">RabbitMQ 本身只保证单个队列内的消息是按顺序投递的，但不保证消费顺序。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 原因：如果有多个消费者，消息 1 分给消费者 A，消息 2 分给消费者 B，如果 B 先处理完，顺序就乱了</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 方案一：单队列 + 单消费者，但吞吐量就下来了</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 方案二：按业务 ID 哈希到不同队列，比如同一个订单的消息都进同一个队列，不同订单可以并行</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">实际项目里，大部分场景不需要严格全局有序，只要局部有序就行。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q12：Kafka 怎么保证消息顺序？和 RabbitMQ 有什么不同？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Kafka 是分区内有序，一个分区内的消息严格按顺序存储和消费。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 要保证某一类消息有序，就把它们发到同一个分区（用相同的 key 哈希）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 和 RabbitMQ 的区别：Kafka 的顺序是天然的，因为分区是 append-only 的日志结构；RabbitMQ 是队列模型，多消费者时顺序会乱</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. Kafka 可以通过增加分区来提高并发，同时保证分区内有序</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q13：什么是消息回溯？Kafka 和 RabbitMQ 都支持吗？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">消息回溯就是消费完的消息可以重新消费。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. Kafka 支持：因为消息是存在磁盘上的日志，消费者只要把 offset 往前调就能重新读。这也是 Kafka 适合大数据场景的原因之一</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. RabbitMQ 不支持：消息被 ack 后就从队列里删了，没法回溯。要实现类似功能，得自己把消息存一份到数据库</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q14：Kafka 的高可用架构是什么样的？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Kafka 是多副本架构：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 每个 Topic 有多个 Partition（分区）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 每个 Partition 有多个 Replica（副本），分布在不同 Broker 上</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 其中一个是 Leader，负责读写；其他是 Follower，同步 Leader 的数据</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. Leader 挂了，从 Follower 里选一个新的 Leader</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">生产者可以设置 acks 参数：acks=0（发了就不管）、acks=1（Leader 确认就返回，默认）、acks=all（所有 ISR 同步副本都确认，最安全）。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q15：什么是 ISR？ISR 里都有哪些副本？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">ISR（In-Sync Replicas）就是跟得上 Leader 的副本集合。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 满足条件的副本才能进 ISR：副本的最后一条消息的 offset 和 Leader 差距在 replica.lag.time.max.ms 时间内（默认 30 秒）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. Follower 跟不上了就被踢出 ISR，跟上了再加回来</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. acks=all 的时候，要等 ISR 里所有副本都同步完才返回。如果 ISR 只剩 Leader 了，就退化成单副本，可靠性下降</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第六层：场景设计</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q16：如果让你设计一个秒杀系统，消息队列怎么用？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">秒杀系统中消息队列主要用来削峰：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 前端限流：验证码、答题，挡住一部分流量</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 网关层限流：超过系统承载能力的直接返回活动太火爆</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 请求入队：进来的请求先存到消息队列里（削峰）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. 后端消费：消费者慢慢从队列里取，校验库存、生成订单</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  5. 结果通知：下单成功的用户发通知，前端轮询结果</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">关键点：库存要提前预热到 Redis，扣库存用 Redis 做；消息队列要做持久化防止丢单；消费端要做幂等防止重复下单。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q17：如何实现延时消息？（订单超时自动取消）</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">几种方案：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. RabbitMQ 死信队列 + TTL：消息设置 TTL，到期后进入死信交换机，路由到死信队列。缺点：如果前面有消息没过期，后面的也得等</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. RabbitMQ 延时队列插件：消息发到延时交换机，到时间了才投递到队列，解决了头部阻塞问题，适合中小规模延时</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. RocketMQ 自带延时消息：原生支持，有 18 个延时级别，但不支持任意时间精度</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. 时间轮 + Redis ZSet：用 ZSet 存，score 是到期时间，定时任务轮询到期的消息，适合自己实现，灵活度高</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">我们项目里订单超时取消，用 RabbitMQ 延时队列插件就够了。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q18：如何实现分布式事务？消息队列能做吗？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">可以，基于消息队列的分布式事务叫可靠消息最终一致性（也叫事务消息）。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 方式一：本地消息表（经典方案）：业务操作和写消息表在同一个本地事务里一起提交；后台定时任务扫描消息表发消息；消费端消费消息执行下游业务；消费成功后回传确认</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 方式二：RocketMQ 事务消息：发送 half 消息（半消息）；执行本地事务；本地事务成功就 commit 消息，失败就 rollback；长时间没收到状态 Broker 会回查</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">我们项目里如果有跨服务的事务，用本地消息表方案就够用了，简单可靠。</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">第七层：项目结合</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q19：你刚才说你们项目现在没用到消息队列，那如果加进去，你会怎么改造？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">我会选几个典型场景逐步引入，不一次性全改：</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 第一步：通知类场景（风险最低）：订单通知、点赞通知、系统通知，改成发消息到队列，通知服务单独消费。好处：主流程更快了，通知服务挂了也不影响下单</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 第二步：异步解耦：比如用户发布帖子，原来同步写搜索索引，改成发消息，搜索服务异步建索引</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 第三步：削峰场景：秒杀、抢票这种流量突增的，请求先入队，后端按能力消费</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">技术选型用 RabbitMQ，因为团队 Java 技术栈，学习成本低，功能也够。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">Q20：用了消息队列之后，系统复杂度上升了，你怎么权衡？</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">确实，引入 MQ 会带来新的问题：需要维护 MQ 集群增加运维成本；要处理消息丢失、重复、积压、顺序等问题；系统从同步变成异步，排查问题更难了。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  1. 能不用就不用：量不大、同步调用能搞定的，就别为了用而用</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  2. 逐步引入：先从非核心场景（比如通知）开始，积累经验</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  3. 做好监控：消息堆积量、消费失败率、死信队列告警都要有</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">  4. 做好补偿：考虑消息丢了、消费失败了怎么人工介入</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">一句话：技术是为业务服务的，不是为了炫技。</w:t></w:r></w:p>
+<w:p><w:pPr><w:pStyle w:val="2"/><w:spacing w:before="300" w:after="150"/></w:pPr><w:r><w:rPr><w:b/><w:sz w:val="28"/><w:szCs w:val="28"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/><w:color w:val="2E75B6"/></w:rPr><w:t xml:space="preserve">面试技巧</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">1. 先总后分：先给结论，再展开说细节。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">2. 结合项目：每个问题尽量往你的智慧校园项目上靠。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">3. 诚实态度：不会的别瞎编，说这块我了解不多，但我可以从 xx 角度分析一下。</w:t></w:r></w:p>
+<w:p><w:pPr><w:spacing w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/><w:rFonts w:ascii="Arial" w:eastAsia="Microsoft YaHei" w:hAnsi="Arial"/></w:rPr><w:t xml:space="preserve">4. 主动引导：回答的时候埋点，引导面试官往你熟悉的方向问。</w:t></w:r></w:p>
+<w:sectPr w:rsidR="001350C1" w:rsidRPr="00F143EC">
+      <w:headerReference w:type="default" r:id="rId8"/>
+      <w:footerReference w:type="default" r:id="rId9"/>
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="708" w:footer="708" w:gutter="0"/>
+      <w:cols w:space="720"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr></w:body>
+</w:document>
