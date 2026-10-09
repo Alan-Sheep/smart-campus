@@ -1,80 +1,232 @@
-# 智慧校园 SmartCampus
+<div align="center">
 
-> 个人全栈练手项目：校园服务一站式平台（校园频道 / 快递代取 / 打印服务 / 跑腿 / 代课 / 二手市场 / 活动报名 / 游戏搭子 / 失物招领 / 站内私信），支持多学校数据隔离与跨校只读。
+# 🎓 SmartCampus · 智慧校园
 
-## 技术栈
+**基于 Spring Boot + uni-app 的校园服务一站式平台**
 
-| 层 | 技术 |
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-brightgreen)
+![MyBatis-Plus](https://img.shields.io/badge/MyBatis--Plus-3.5-blue)
+![Redis](https://img.shields.io/badge/Redis-6-red)
+![Vue](https://img.shields.io/badge/Vue-3.x-42b883)
+![uni-app](https://img.shields.io/badge/uni--app-H5%20%7C%20微信小程序-2b9939)
+![MySQL](https://img.shields.io/badge/MySQL-8-4479a1)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+[![Backend](https://img.shields.io/badge/后端-147%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
+[![Frontend](https://img.shields.io/badge/用户端-40%20Vue组件-4FC08D?style=flat-square&logo=vuedotjs)](frontend/)
+[![API](https://img.shields.io/badge/接口-26%20控制器-009688?style=flat-square)](backend/src/main/java/com/campus/smart/controller)
+[![DB](https://img.shields.io/badge/数据库-23%20张表-336791?style=flat-square&logo=mysql)](sql/)
+[![Lines](https://img.shields.io/badge/代码-8.0万%2B%20行-important?style=flat-square)](#)
+
+*独立完成的前后端全栈项目 · 从需求分析、数据库设计到接口测试全流程*
+
+</div>
+
+---
+
+## 📖 项目简介
+
+SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大业务模块**，支持 **多学校数据隔离**（内置 15 所重庆高校演示数据）。项目完整实现了从注册登录、内容发布、订单撮合到站内消息的闭环业务链路。
+
+### 🖼️ 业务全景
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                      用户端 (uni-app)                     │
+│        H5 · 微信小程序 · 多学校切换 · 跨校访客只读          │
+├──────────┬──────────┬──────────┬──────────┬─────────────┤
+│ 📢 校园频道│ 📦 快递代取│ 🖨️ 打印服务│ 🏃 校园跑腿│ 📚 代课服务  │
+│ 发帖·评论 │ 发布/接单 │ 文件上传  │ 多类型单   │ 发布/接单   │
+│ 点赞·收藏 │ 状态机    │ 价格配置  │ 接单闭环   │ 报酬结算    │
+├──────────┼──────────┼──────────┼──────────┼─────────────┤
+│ 🛒 二手市场│ 🎉 校园活动│ 🎮 游戏搭子│ 🔍 失物招领│ ✉️ 站内消息  │
+│ 分类/收藏 │ 报名/取消 │ 组队筛选  │ 招领/寻物  │ 私信·互动   │
+├──────────┴──────────┴──────────┴──────────┴─────────────┤
+│         🔐 邮箱验证码登录 · JWT 认证 · 学校上下文           │
+├─────────────────────────────────────────────────────────┤
+│                  管理端 (Vue3 + Element Plus)             │
+│      内容审核 · 订单管理 · 用户管理 · 数据看板(ECharts)      │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ✨ 核心设计与亮点
+
+> 💡 以下每个点都有真实代码支撑，欢迎按图索骥
+
+### 🔐 认证与安全
+
+| 设计点 | 实现 | 代码位置 |
+|---|---|---|
+| 邮箱验证码登录 | SMTP 真实发送 + 开发模式 Mock 切换（配置驱动） | [EmailCodeService](backend/src/main/java/com/campus/smart/service/EmailCodeService.java) |
+| 三层防刷 | 同邮箱 60s 重发间隔 + 单邮箱单日上限 + 同 IP 单日上限（全部 Redis 后端强校验） | 同上 |
+| 防暴力破解 | 验证码错误 5 次锁定 30 分钟，锁定期间禁止重发 | 同上 |
+| 一次性消费 | 验证码校验通过立即删除，杜绝重放 | 同上 |
+| 认证漏洞修复 | 修复「验证码参数为空即跳过校验」的认证绕过漏洞 | [UserController](backend/src/main/java/com/campus/smart/controller/UserController.java) |
+| JWT 无状态认证 | 拦截器统一鉴权；公开接口白名单 + 尽力身份识别（匿名页也能展示个人点赞/收藏态） | [JwtInterceptor](backend/src/main/java/com/campus/smart/interceptor/JwtInterceptor.java) |
+
+### 🏫 多学校数据隔离（本项目最有特色的业务设计）
+
+- 15 所学校数据按 `school_id` 隔离，覆盖全部业务表
+- **切校即刷新**：10 个页面统一接入 uni-app `onShow` 生命周期，切换学校返回后自动重拉数据
+- **跨校访客只读**：切到非本人学校时，仅校园频道可互动（发帖/评论/点赞/收藏），其余业务写操作统一守卫拦截 —— [school-permission.js](frontend/src/utils/school-permission.js)
+- 学校上下文通过拦截器 + ThreadLocal 贯穿请求链路，业务层零侵入
+
+### ⚡ 性能优化
+
+| 问题 | 优化 | 效果 |
+|---|---|---|
+| 帖子列表 N+1 查询 | 逐条 COUNT 改为批量聚合（GROUP BY 一次性统计点赞/评论数） | 21 次查询 → **4 次** |
+| 热点数据缓存 | 首页 banner/公告、帖子与商品浏览计数走 Redis | 缓存异常自动**降级查库**，主流程不受影响 |
+| 数据库索引 | 高频查询列建复合索引（如 `school_id+category+create_time`） | 见 [perf_indexes.sql](sql/perf_indexes.sql) |
+
+### 🧱 工程化实践
+
+- **幂等迁移脚本**：SQL 增量迁移（v2→v5）按「school_id + 判重键」设计，可重复执行不产生脏数据
+- **系统化接口测试**：多学校 × 多轮回归、防刷/锁定/过期边界场景、跨校隔离专项验证
+- **配置分离**：真实密钥走 `application-local.yml`（不入库），主配置占位符 `${EMAIL_AUTH_CODE:}`
+- **统一响应与全局异常**：`Result<T>` 包装 + `GlobalExceptionHandler`，业务错误不暴露堆栈
+
+---
+
+## 🛠️ 技术栈
+
+### 后端
+
+| 分类 | 技术 |
 |---|---|
-| 后端 | Spring Boot 2.7.18 · Java 21 · MyBatis-Plus 3.5 · JWT · Redis · Spring Mail |
-| 用户端 | uni-app (Vue3 `<script setup>`)，编译到 H5 + 微信小程序 |
-| 管理端 | Vue3 + Element Plus + ECharts |
-| 数据库 | MySQL 8（外键约束 + 唯一索引 + 复合索引设计） |
-| 安全 | JWT 无状态认证 · 邮箱验证码（防刷/锁定/一次性消费）· 角色权限拦截 |
+| 框架 | Spring Boot 2.7.18 · Spring AOP · Spring Validation · Spring Mail |
+| ORM | MyBatis-Plus 3.5（逻辑删除 · 自动填充 · 条件构造器） |
+| 安全 | JWT (jjwt) · 拦截器鉴权 · BCrypt |
+| 中间件 | Redis（缓存 + 验证码 + 限流计数）· MySQL 8 |
+| 接口文档 | Knife4j (OpenAPI 3) |
+| 其他 | 阿里云 OSS（文件上传）· Java 21 |
 
-## 功能亮点（面试可深挖的点）
+### 前端
 
-- **邮箱验证码登录**：Redis TTL 5 分钟 + 一次性消费防重放；60 秒重发间隔 + 单邮箱单日上限 + 同 IP 单日上限三层防刷；错误 5 次锁定 30 分钟防暴力破解。邮件服务抽象（SMTP 实现），开发模式 mock 与生产模式配置切换。并修复了“验证码参数为空即跳过校验”的认证漏洞
-- **多学校数据隔离**：15 所学校按 `school_id` 隔离，切学校自动刷新各页面数据（uni-app `onShow` 生命周期统一接入）；跨校访客只读（仅校园频道可互动），写操作统一守卫拦截
-- **接口性能**：频道帖子列表 N+1 查询优化（21 次 → 4 次批量聚合）；Redis 缓存热点数据（首页/详情计数），缓存异常自动降级查库
-- **订单类业务闭环**：发布→接单→完成→评价全链路，状态机与金额计算在服务端强校验
-- **工程化**：系统化接口级测试（多校×多轮回归、防刷/锁定/过期边界场景）、git 历史干净、密钥与代码分离
+| 端 | 技术 |
+|---|---|
+| 用户端 | uni-app + Vue3 (`<script setup>`) + Pinia，编译 H5 / 微信小程序 |
+| 管理端 | Vue3 + Element Plus + ECharts + Vue Router |
+| 工程 | Vite |
 
-## 快速启动（本地跑起来）
+### 数据库
 
-### 前置要求
-- JDK 21、MySQL 8、Redis、Node.js 16+
+23 张表，含外键约束、唯一索引（如 `uk_user_email`）、复合索引（多校隔离查询）、逻辑删除字段。完整建表与迁移脚本见 [sql/](sql/)。
 
-### 步骤
+---
+
+## 🚀 快速开始
+
+### 环境要求
+
+```
+JDK 21+ · MySQL 8+ · Redis 6+ · Node.js 16+ · Maven 3.6+
+```
+
+### 1️⃣ 初始化数据库
 
 ```bash
-# 1. 初始化数据库（依次执行）
 mysql -uroot -p < sql/init.sql
 mysql -uroot -p < sql/full_init.sql
 mysql -uroot -p < sql/update_v3_user_features.sql
 mysql -uroot -p < sql/update_v4_school_data_seed.sql
 mysql -uroot -p < sql/update_v5_email_login.sql
+```
 
-# 2. 改后端数据库/Redis 密码：backend/src/main/resources/application.yml
-#    （可选）配置邮箱验证码：复制说明见 application-local.yml 样例，
-#    不配置则验证码走开发模式（直接返回给前端，功能不受影响）
+> 内置 15 所重庆高校 + 各模块演示数据，启动即可看到完整页面效果
 
-# 3. 启动后端（8080）
+### 2️⃣ 配置并启动后端（8080）
+
+```bash
+# 修改 backend/src/main/resources/application.yml 中的数据库/Redis 密码
 cd backend
 mvn spring-boot:run
+```
 
-# 4. 启动用户端 H5（5173）
+### 3️⃣ 启动用户端 H5（5173）
+
+```bash
 cd frontend
 npm install
 npm run dev:h5
 # 浏览器访问 http://localhost:5173
-
-# 5.（可选）管理端（8081）
-cd admin && npm install && npm run dev
 ```
 
-### 邮箱验证码（可选配置）
-在 `backend/src/main/resources/application-local.yml` 填入 QQ 邮箱与授权码（见该文件内注释），并把 `email-code.enabled` 改为 `true`。**不配置也能跑**：验证码为开发模式，直接回显在前端。
+### 4️⃣（可选）启动管理端（8081）
 
-## 目录结构
+```bash
+cd admin
+npm install
+npm run dev
+# 默认账号 admin / admin123
+```
+
+### 5️⃣（可选）配置真实邮箱验证码
+
+在后端创建 `application-local.yml`（此文件不入库）：
+
+```yaml
+spring:
+  mail:
+    username: your-qq@qq.com
+    password: 你的16位SMTP授权码   # QQ邮箱设置→账户→开启IMAP/SMTP服务获取
+
+email-code:
+  enabled: true
+```
+
+> ❗ **不配置也能跑**：`email-code.enabled=false` 时验证码走开发模式（直接回显给前端），全部功能不受影响
+
+---
+
+## 📂 项目结构
 
 ```
 SmartCampus
-├── backend/          # Spring Boot 后端（8080）
+├── backend/                        # Spring Boot 后端
 │   └── src/main/java/com/campus/smart
-│       ├── controller/   # 12+ 业务控制器
-│       ├── service/      # 业务层（含邮箱验证码、邮件发送）
-│       ├── entity/       # MyBatis-Plus 实体
-│       ├── interceptor/  # JWT / 学校上下文拦截器
-│       └── config/       # WebMvc（拦截链）等
-├── frontend/         # uni-app 用户端（H5:5173 / 小程序）
-│   └── src/pages     # 20+ 页面：频道/快递/打印/跑腿/代课/市场/活动/游戏/失物/消息/我的
-├── admin/            # Vue3 管理端（8081）
-├── sql/              # 建库脚本 + 增量迁移（幂等）
-└── docs/             # 启动指南、修复报告
+│       ├── controller/             # 26 个控制器（用户/频道/订单类/管理端）
+│       ├── service/                # 业务层（EmailCodeService 安全设计是亮点）
+│       ├── entity/                 # MyBatis-Plus 实体（23 张表）
+│       ├── interceptor/            # JWT 鉴权 / 学校上下文 / 管理员权限
+│       ├── config/                 # 拦截链 · Redis 配置 · 全局异常
+│       └── utils/                  # Redis 工具 · JWT · ThreadLocal 上下文
+├── frontend/                       # uni-app 用户端
+│   └── src
+│       ├── pages/                  # 15 个模块 40+ 页面
+│       ├── utils/                  # request 封装 · 跨校权限守卫
+│       └── store/                  # Pinia（用户态 · 学校态）
+├── admin/                          # Vue3 管理端
+│   └── src/views                   # 审核中心 · 订单管理 · 数据看板
+├── sql/                            # 初始化 + v2~v5 幂等迁移
+└── docs/                           # 设计文档与测试报告
 ```
 
-## 安全说明
+---
 
-- 所有密钥（邮箱授权码等）通过 `application-local.yml` 注入，该文件不入库
-- `application.yml` 中仅含开发环境默认值（本地 MySQL/Redis 密码），生产部署时替换
+## 🔑 演示账号
+
+| 端 | 账号 | 说明 |
+|---|---|---|
+| 用户端 | 任意 QQ 邮箱 | 验证码登录，新邮箱自动注册 |
+| 用户端（开发模式） | 未配置邮箱时 | 验证码直接回显在弹窗中 |
+| 管理端 | admin / admin123 | 内容审核与数据看板 |
+
+---
+
+## 📌 Roadmap
+
+- [ ] WebSocket 站内私信实时推送（当前轮询方案）
+- [ ] 微信小程序支付（跑腿/代课报酬闭环）
+- [ ] Redis 分布式锁防止订单并发接单
+- [ ] 单元测试覆盖核心 Service 层
+- [ ] Docker Compose 一键部署
+
+---
+
+## 📄 License
+
+[MIT](LICENSE) · 仅供学习交流使用
