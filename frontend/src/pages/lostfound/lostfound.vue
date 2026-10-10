@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!-- 失物招领?-->
   <view class="lostfound-page">
     <!-- 顶部搜索?-->
@@ -429,7 +429,7 @@ function contactPublisher(item) {
     }
   })
 }
-</script></script>
+</script>
 
 <style lang="scss" scoped>
 .lostfound-page {
