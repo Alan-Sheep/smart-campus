@@ -136,8 +136,11 @@ const messageList = ref([])
 // 消息写入统一入口：isMine 在写入时按「发送者是否=我」一次算死
 // 我=当前登录uid（与 targetUserId 相异的那个）
 function normalizeMessage(m) {
-  const myId = Number((uni.getStorageSync('userInfo') || {}).id)
-  return { ...m, fromUserId: Number(m.fromUserId), isMine: Number(m.fromUserId) === myId }
+  // 与「对方ID」比较：targetUserId 从 URL 参数来，聊天页内恒定可靠
+  // （从 storage 读 myId 在个别时机会拿到空值 → NaN → 全部误判为对方靠左）
+  const other = Number(targetUserId.value)
+  const from = Number(m.fromUserId)
+  return { ...m, fromUserId: from, isMine: other ? from !== other : false }
 }
 
 const displayList = computed(() => {
