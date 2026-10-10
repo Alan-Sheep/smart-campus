@@ -67,6 +67,7 @@
  */
 import { ref, onMounted } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
+import { scrollToTop } from '@/utils/scroll-top'
 import { gameApi } from '@/api/index'
 import { checkLogin } from '@/utils/request'
 import { guardWrite, onSchoolChanged } from '@/utils/school-permission'
@@ -93,6 +94,7 @@ onMounted(() => {
  * 切换学校后不刷新会一直显示上一所学校的分类和数据。
  */
 onShow(() => {
+  scrollToTop('.game-list')
   onSchoolChanged()
   loadGameTypes()
   loadGameList()

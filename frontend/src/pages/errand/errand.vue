@@ -92,6 +92,7 @@
  */
 import { ref, onMounted, onUnmounted } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
+import { scrollToTop } from '@/utils/scroll-top'
 import { errandApi } from '@/api/index'
 import { checkLogin } from '@/utils/request'
 import { guardWrite, onSchoolChanged } from '@/utils/school-permission'
@@ -122,6 +123,7 @@ onMounted(() => {
 // hasLoadedOnce 避免与 onMounted 首屏加载重复请求
 let hasLoadedOnce = false
 onShow(() => {
+  scrollToTop()
   onSchoolChanged()
   if (hasLoadedOnce) { loadErrandList() }
   hasLoadedOnce = true

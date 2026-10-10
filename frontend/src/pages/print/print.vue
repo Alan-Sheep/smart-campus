@@ -138,6 +138,7 @@
  */
 import { ref, reactive, computed, onMounted, onUnmounted } from 'vue'
 import { onShow } from '@dcloudio/uni-app'
+import { scrollToTop } from '@/utils/scroll-top'
 import { printApi } from '@/api/index'
 import { fileApi } from '@/api/index'
 import { checkLogin } from '@/utils/request'
@@ -190,6 +191,7 @@ onMounted(() => {
 // hasLoadedOnce 避免与 onMounted 首屏加载重复请求
 let hasLoadedOnce = false
 onShow(() => {
+  scrollToTop()
   onSchoolChanged()
   if (hasLoadedOnce) { loadPriceConfig() }
   hasLoadedOnce = true
