@@ -35,7 +35,7 @@
           :key="'msg-' + item.id"
           :id="'msg-' + item.id"
           class="msg-row"
-          :class="{ 'is-mine': Number(item.fromUserId) !== Number(targetUserId) }"
+          :class="{ 'is-mine': item.isMine }"
         >
           <!-- 时间显示（每5条或间隔超过5分钟显示一次） -->
           <view v-if="shouldShowTime(index)" class="msg-time">
@@ -44,7 +44,7 @@
 
           <!-- 头像 -->
           <view class="avatar-box">
-            <view v-if="Number(item.fromUserId) !== Number(targetUserId)" class="avatar my-avatar">
+            <view v-if="item.isMine" class="avatar my-avatar">
               <text>{{ myAvatarText }}</text>
             </view>
             <view v-else class="avatar other-avatar">
@@ -54,7 +54,7 @@
 
           <!-- 消息气泡 -->
           <view class="bubble-wrap">
-            <view class="bubble" :class="{ 'mine-bubble': Number(item.fromUserId) !== Number(targetUserId) }">
+            <view class="bubble" :class="{ 'mine-bubble': item.isMine }">
               <text class="bubble-text">{{ item.content }}</text>
             </view>
           </view>
@@ -132,12 +132,18 @@ const pageSize = 20
 const messageList = ref([])
 
 // 显示用的正序列表
+
+// 消息写入统一入口：isMine 在写入时按「发送者是否=我」一次算死
+// 我=当前登录uid（与 targetUserId 相异的那个）
+function normalizeMessage(m) {
+  const myId = Number((uni.getStorageSync('userInfo') || {}).id)
+  return { ...m, fromUserId: Number(m.fromUserId), isMine: Number(m.fromUserId) === myId }
+}
+
 const displayList = computed(() => {
-  // fromUserId 统一归一化为 Number：历史/轮询/本地发送三条路径的类型不一致，
-  // 导致同一个人的消息气泡方向忽左忽右
-  return [...messageList.value]
-    .map(m => ({ ...m, fromUserId: Number(m.fromUserId) }))
-    .reverse()
+  // 消息方向在【写入时】一次性算好存为 isMine（渲染期零计算零比较），
+  // 从根源避免任何类型/时序问题导致的左右混乱
+  return [...messageList.value].reverse()
 })
 
 // 我的头像文字
@@ -209,7 +215,7 @@ async function pollNewMessages() {
 
     const cur = messageList.value
     if (!cur.length) {
-      messageList.value = records
+      messageList.value = records.map(normalizeMessage)
       nextTick(() => scrollToBottom())
       return
     }
@@ -227,7 +233,7 @@ async function pollNewMessages() {
     const existIds = new Set(cur.map(m => m.id))
     const toAdd = fresh.filter(m => !existIds.has(m.id))
     if (toAdd.length) {
-      messageList.value = [...toAdd, ...cur]
+      messageList.value = [...toAdd.map(normalizeMessage), ...cur]
       nextTick(() => scrollToBottom())
     }
   } catch (err) {
@@ -266,7 +272,7 @@ async function loadMessages() {
     })
     
     const records = data.records || data.list || []
-    messageList.value = records
+      messageList.value = records.map(normalizeMessage)
 
     if (records.length < pageSize) {
       noMore.value = true
@@ -304,7 +310,7 @@ async function loadOlder() {
     
     if (records.length > 0) {
       // 历史消息加到列表头部（因为列表是倒序存储的，新的在前面）
-      messageList.value = [...messageList.value, ...records]
+      messageList.value = [...messageList.value, ...records.map(normalizeMessage)]
       pageNum.value++
     }
     
@@ -349,7 +355,7 @@ async function sendMessage() {
     // 发送成功，加入消息列表（加到前面，因为列表是倒序的）
     if (data) {
       // fromUserId 归一化 Number：与 currentUserId 比较一致，否则自己发的第一条消息被判为对方（靠左）
-      messageList.value = [{ ...data, fromUserId: Number(data.fromUserId ?? currentUserId.value) }, ...messageList.value]
+      messageList.value = [normalizeMessage(data), ...messageList.value]
     }
   } catch (err) {
     console.warn('发送消息失败:', err)
