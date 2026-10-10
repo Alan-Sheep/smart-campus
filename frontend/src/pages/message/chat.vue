@@ -133,7 +133,11 @@ const messageList = ref([])
 
 // 显示用的正序列表
 const displayList = computed(() => {
-  return [...messageList.value].reverse()
+  // fromUserId 统一归一化为 Number：历史/轮询/本地发送三条路径的类型不一致，
+  // 导致同一个人的消息气泡方向忽左忽右
+  return [...messageList.value]
+    .map(m => ({ ...m, fromUserId: Number(m.fromUserId) }))
+    .reverse()
 })
 
 // 我的头像文字

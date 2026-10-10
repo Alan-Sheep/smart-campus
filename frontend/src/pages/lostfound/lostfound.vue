@@ -193,6 +193,27 @@
         </view>
       </view>
     </view>
+    <!-- 联系方式弹层（自定义置顶） -->
+    <view class="contact-mask" v-if="showContactSheet" @click="showContactSheet = false">
+      <view class="contact-sheet" @click.stop>
+        <view class="sheet-title">联系发布者</view>
+        <view class="sheet-option" @click="doPrivateMessage">
+          <text class="opt-icon">💬</text>
+          <view class="opt-body">
+            <text class="opt-main">发站内私信</text>
+            <text class="opt-sub">推荐 · 不泄露手机号</text>
+          </view>
+        </view>
+        <view class="sheet-option" v-if="pendingContact && pendingContact.contact && !String(pendingContact.contact).includes('*')" @click="doCallPhone">
+          <text class="opt-icon">📞</text>
+          <view class="opt-body">
+            <text class="opt-main">拨打电话 {{ pendingContact.contact }}</text>
+            <text class="opt-sub">发布者填写的联系电话</text>
+          </view>
+        </view>
+        <view class="sheet-cancel" @click="showContactSheet = false">取消</view>
+      </view>
+    </view>
   </view>
 </template>
 
@@ -229,6 +250,8 @@ const publishForm = ref({
 // 详情弹窗
 const showDetailModal = ref(false)
 const detailItem = ref({})
+const pendingContact = ref(null)
+const showContactSheet = ref(false)
 
 onMounted(() => {
   loadList()
@@ -410,24 +433,29 @@ function contactPublisher(item) {
     return
   }
   const hasPhone = item.contact && !String(item.contact).includes('*')
-  const opts = hasPhone ? ['发站内私信', '拨打电话'] : ['发站内私信']
-  uni.showActionSheet({
-    itemList: opts,
-    success: (r) => {
-      if (r.tapIndex === 0) {
-        // 站内私信：跳聊天页并预填消息
-        const nickname = encodeURIComponent(item.publisher || '失物发布者')
-        const prefill = encodeURIComponent('你好，关于「' + (item.title || item.itemName || '') + '」')
-        uni.navigateTo({
-          url: '/pages/message/chat?targetUserId=' + item.userId
-            + '&targetNickname=' + nickname
-            + '&prefill=' + prefill
-        })
-      } else if (r.tapIndex === 1 && hasPhone) {
-        uni.makePhoneCall({ phoneNumber: item.contact })
-      }
-    }
+  // 打开自定义置顶弹层（系统 ActionSheet 在部分手机会被页面元素遮挡）
+  pendingContact.value = item
+  showContactSheet.value = true
+}
+
+/** 弹层：站内私信 */
+function doPrivateMessage() {
+  const item = pendingContact.value
+  showContactSheet.value = false
+  const nickname = encodeURIComponent(item.publisher || '失物发布者')
+  const prefill = encodeURIComponent('你好，关于「' + (item.title || item.itemName || '') + '」')
+  uni.navigateTo({
+    url: '/pages/message/chat?targetUserId=' + item.userId
+      + '&targetNickname=' + nickname
+      + '&prefill=' + prefill
   })
+}
+
+/** 弹层：一键拨号 */
+function doCallPhone() {
+  const item = pendingContact.value
+  showContactSheet.value = false
+  uni.makePhoneCall({ phoneNumber: item.contact })
 }
 </script>
 
@@ -901,4 +929,24 @@ function contactPublisher(item) {
   color: #666;
   line-height: 1.6;
 }
+
+/* 联系方式弹层：z-index 置顶 */
+.contact-mask {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex; align-items: flex-end;
+}
+.contact-sheet {
+  width: 100%; background: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+  padding: 32rpx 32rpx calc(32rpx + env(safe-area-inset-bottom));
+}
+.sheet-title { text-align: center; font-size: 30rpx; font-weight: 600; color: #333; margin-bottom: 24rpx; }
+.sheet-option { display: flex; align-items: center; gap: 20rpx; padding: 28rpx 24rpx; border-radius: 16rpx; background: #f7f7fa; margin-bottom: 16rpx; }
+.sheet-option .opt-icon { font-size: 40rpx; }
+.sheet-option .opt-body { display: flex; flex-direction: column; }
+.sheet-option .opt-main { font-size: 30rpx; color: #333; font-weight: 500; }
+.sheet-option .opt-sub { font-size: 22rpx; color: #999; margin-top: 4rpx; }
+.sheet-cancel { text-align: center; padding: 24rpx 0; font-size: 30rpx; color: #999; }
 </style>
