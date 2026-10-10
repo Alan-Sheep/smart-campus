@@ -59,6 +59,28 @@
       </view>
     </view>
             + '&prefill=' + encodeURIComponent('你好，关于「' + (item.value.title || '') + '」')
+    <!-- 联系方式弹层（自定义，z-index 置顶，修复被页面元素遮挡） -->
+    <view class="contact-mask" v-if="showContactSheet" @click="showContactSheet = false">
+      <view class="contact-sheet" @click.stop>
+        <view class="sheet-title">联系发布者</view>
+        <view class="sheet-option" @click="doPrivateMessage">
+          <text class="opt-icon">💬</text>
+          <view class="opt-body">
+            <text class="opt-main">发站内私信</text>
+            <text class="opt-sub">推荐 · 不泄露手机号</text>
+          </view>
+        </view>
+        <view class="sheet-option" v-if="hasRealPhone" @click="doCallPhone">
+          <text class="opt-icon">📞</text>
+          <view class="opt-body">
+            <text class="opt-main">拨打电话 {{ item.contact }}</text>
+            <text class="opt-sub">发布者填写的联系电话</text>
+          </view>
+        </view>
+        <view class="sheet-cancel" @click="showContactSheet = false">取消</view>
+      </view>
+    </view>
+
     <!-- 底部操作栏 -->
     <view class="bottom-bar">
       <view class="bar-item" @click="contactPublisher">
@@ -76,11 +98,13 @@
 /**
  * 失物招领详情页
  */
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { lostFoundApi } from '@/api/index'
 
 const item = ref(null)
 const matchList = ref([])
+const showContactSheet = ref(false)
+const hasRealPhone = computed(() => !!(item.value && item.value.contact && !item.value.contact.includes('*')))
 
 onMounted(() => {
   const pages = getCurrentPages()
@@ -123,24 +147,27 @@ function contactPublisher() {
     return
   }
   const hasPhone = item.value.contact && !item.value.contact.includes('*')
-  uni.showActionSheet({
-    itemList: hasPhone ? ['发站内私信', '拨打电话'] : ['发站内私信'],
-    success: (r) => {
-      if (r.tapIndex === 0) {
-        // 跳转聊天页：带对方ID和昵称，预填一条消息
-        const nickname = encodeURIComponent(item.value.publisher || '失物发布者')
-        uni.navigateTo({
-          url: '/pages/message/chat?targetUserId=' + item.value.userId
-            + '&targetNickname=' + nickname
-            + '&prefill=' + encodeURIComponent('你好，关于「' + (item.value.title || '') + '」')
-        })
-      } else if (r.tapIndex === 1 && hasPhone) {
-        uni.makePhoneCall({ phoneNumber: item.value.contact })
-      }
-    }
+  // 打开自定义置顶弹层（替代系统 ActionSheet：部分手机 WebView 上会被遮挡）
+  showContactSheet.value = true
+}
+
+/** 弹层：站内私信 */
+function doPrivateMessage() {
+  showContactSheet.value = false
+  const nickname = encodeURIComponent(item.value.publisher || '失物发布者')
+  const prefill = encodeURIComponent('你好，关于「' + (item.value.title || '') + '」')
+  uni.navigateTo({
+    url: '/pages/message/chat?targetUserId=' + item.value.userId
+      + '&targetNickname=' + nickname
+      + '&prefill=' + prefill
   })
 }
 
+/** 弹层：一键拨号 */
+function doCallPhone() {
+  showContactSheet.value = false
+  uni.makePhoneCall({ phoneNumber: item.value.contact })
+}
 
 function handleAction() {
   if (item.value.type === 'lost') {
@@ -363,4 +390,24 @@ function goToMatchDetail(id) {
   font-weight: bold;
   border-radius: 44rpx;
 }
+
+/* 联系方式弹层：z-index 置顶 */
+.contact-mask {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex; align-items: flex-end;
+}
+.contact-sheet {
+  width: 100%; background: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+  padding: 32rpx 32rpx calc(32rpx + env(safe-area-inset-bottom));
+}
+.sheet-title { text-align: center; font-size: 30rpx; font-weight: 600; color: #333; margin-bottom: 24rpx; }
+.sheet-option { display: flex; align-items: center; gap: 20rpx; padding: 28rpx 24rpx; border-radius: 16rpx; background: #f7f7fa; margin-bottom: 16rpx; }
+.sheet-option .opt-icon { font-size: 40rpx; }
+.sheet-option .opt-body { display: flex; flex-direction: column; }
+.sheet-option .opt-main { font-size: 30rpx; color: #333; font-weight: 500; }
+.sheet-option .opt-sub { font-size: 22rpx; color: #999; margin-top: 4rpx; }
+.sheet-cancel { text-align: center; padding: 24rpx 0; font-size: 30rpx; color: #999; }
 </style>

@@ -301,8 +301,8 @@ function locateByAmap() {
             success: (res) => {
               if (res.data && res.data.status === '1' && res.data.regeocode) {
                 const comp = res.data.regeocode.addressComponent
-                form.province = (comp.province || '') + (comp.city || '') + (comp.district || '')
-                form.detail = (comp.township || '') + (comp.street || '') + (comp.streetNumber || '') || res.data.regeocode.formattedAddress
+                form.province = String(comp.province || '') + String(Array.isArray(comp.city) ? '' : (comp.city || '')) + String(comp.district || '')
+                form.detail = [comp.township, comp.street, comp.streetNumber && (comp.streetNumber.number || comp.streetNumber)].filter(Boolean).join('') || (res.data.regeocode.formattedAddress || '')
                 uni.showToast({ title: '已填入定位地址', icon: 'success' })
               } else {
                 uni.showToast({ title: '解析失败：' + (res.data && res.data.info || '未知'), icon: 'none' })
@@ -327,8 +327,8 @@ function locateByAmap() {
         success: (res) => {
           if (res.data && res.data.regeocode) {
             const comp = res.data.regeocode.addressComponent
-            form.province = (comp.province || '') + (comp.city || '') + (comp.district || '')
-            form.detail = (comp.township || '') + (comp.street || '') + (comp.streetNumber || '')
+                form.province = String(comp.province || '') + String(Array.isArray(comp.city) ? '' : (comp.city || '')) + String(comp.district || '')
+                form.detail = [comp.township, comp.street, comp.streetNumber && (comp.streetNumber.number || comp.streetNumber)].filter(Boolean).join('') || (res.data.regeocode.formattedAddress || '')
             uni.showToast({ title: '已填入定位地址', icon: 'success' })
           } else { uni.showToast({ title: '解析失败', icon: 'none' }) }
         },
