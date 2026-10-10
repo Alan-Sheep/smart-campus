@@ -79,6 +79,11 @@
               maxlength="11"
             />
           </view>
+          <!-- 快捷填充：地图定位 / 粘贴识别 -->
+          <view class="quick-actions">
+            <view class="quick-btn" @click="locateByAmap">📍 地图定位</view>
+            <view class="quick-btn" @click="pasteRecognize">📋 粘贴识别</view>
+          </view>
           <!-- 省市区 -->
           <view class="form-item">
             <text class="form-label">所在地区</text>
@@ -690,6 +695,24 @@ function selectAddress(item) {
 
 .form-body {
   padding: 20rpx 32rpx;
+}
+
+/* 快捷填充按钮 */
+.quick-actions {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 4rpx;
+}
+
+.quick-btn {
+  flex: 1;
+  text-align: center;
+  padding: 18rpx 0;
+  border-radius: 12rpx;
+  font-size: 26rpx;
+  color: #6c4ee6;
+  background: #f3efff;
+  border: 1rpx solid #d9cfff;
 }
 
 .form-item {
