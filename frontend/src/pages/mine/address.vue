@@ -294,16 +294,21 @@ function locateByAmap() {
       geo.getCurrentPosition((status, result) => {
         uni.hideLoading()
         if (status === 'complete' && result.position) {
-          const geocoder = new AMap.Geocoder()
-          geocoder.getAddress([result.position.lng, result.position.lat], (st, res) => {
-            if (st === 'complete' && res.regeocode) {
-              const comp = res.regeocode.addressComponent
-              form.province = (comp.province || '') + (comp.city || '') + (comp.district || '')
-              form.detail = (comp.township || '') + (comp.street || '') + (comp.streetNumber || '') || res.regeocode.formattedAddress
-              uni.showToast({ title: '已填入定位地址', icon: 'success' })
-            } else {
-              uni.showToast({ title: '定位成功但解析失败', icon: 'none' })
-            }
+          // 逆地理改用高德 Web 服务 REST（不受 JS key 域名白名单限制，解析更稳）
+          const lnglat = result.position.lng + ',' + result.position.lat
+          uni.request({
+            url: 'https://restapi.amap.com/v3/geocode/regeo?key=b50aabb61744c7139d6e628f8ea1c949&location=' + lnglat + '&extensions=base',
+            success: (res) => {
+              if (res.data && res.data.status === '1' && res.data.regeocode) {
+                const comp = res.data.regeocode.addressComponent
+                form.province = (comp.province || '') + (comp.city || '') + (comp.district || '')
+                form.detail = (comp.township || '') + (comp.street || '') + (comp.streetNumber || '') || res.data.regeocode.formattedAddress
+                uni.showToast({ title: '已填入定位地址', icon: 'success' })
+              } else {
+                uni.showToast({ title: '解析失败：' + (res.data && res.data.info || '未知'), icon: 'none' })
+              }
+            },
+            fail: () => uni.showToast({ title: '地址解析请求失败', icon: 'none' })
           })
         } else {
           uni.showToast({ title: '定位失败，请手动输入', icon: 'none' })

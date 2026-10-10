@@ -21,7 +21,8 @@ export function createApp() {
     const VERSION = (typeof window !== 'undefined' && window.__APP_VERSION) || 'unknown'
     const KEY = 'app_version_seen'
     const seen = uni.getStorageSync(KEY)
-    if (seen && seen !== VERSION) {
+    // seen 为空 = 老缓存用户（从未见过版本标记），也提示刷新一次
+    if (!seen || seen !== VERSION) {
       uni.showModal({
         title: '发现新版本',
         content: '为了获得最佳体验，请刷新页面',
