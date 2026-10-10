@@ -201,7 +201,6 @@
           <text class="opt-icon">💬</text>
           <view class="opt-body">
             <text class="opt-main">发站内私信</text>
-            <text class="opt-sub">推荐 · 不泄露手机号</text>
           </view>
         </view>
         <view class="sheet-option" v-if="pendingContact && pendingContact.contact && !String(pendingContact.contact).includes('*')" @click="doCallPhone">

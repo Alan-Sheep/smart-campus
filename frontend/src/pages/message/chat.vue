@@ -35,7 +35,7 @@
           :key="'msg-' + item.id"
           :id="'msg-' + item.id"
           class="msg-row"
-          :class="{ 'is-mine': Number(item.fromUserId) === Number(currentUserId) }"
+          :class="{ 'is-mine': Number(item.fromUserId) !== Number(targetUserId) }"
         >
           <!-- 时间显示（每5条或间隔超过5分钟显示一次） -->
           <view v-if="shouldShowTime(index)" class="msg-time">
@@ -44,7 +44,7 @@
 
           <!-- 头像 -->
           <view class="avatar-box">
-            <view v-if="Number(item.fromUserId) === Number(currentUserId)" class="avatar my-avatar">
+            <view v-if="Number(item.fromUserId) !== Number(targetUserId)" class="avatar my-avatar">
               <text>{{ myAvatarText }}</text>
             </view>
             <view v-else class="avatar other-avatar">
@@ -54,7 +54,7 @@
 
           <!-- 消息气泡 -->
           <view class="bubble-wrap">
-            <view class="bubble" :class="{ 'mine-bubble': Number(item.fromUserId) === Number(currentUserId) }">
+            <view class="bubble" :class="{ 'mine-bubble': Number(item.fromUserId) !== Number(targetUserId) }">
               <text class="bubble-text">{{ item.content }}</text>
             </view>
           </view>
@@ -171,7 +171,7 @@ onMounted(() => {
   if (userInfo && userInfo.id) {
     currentUserId.value = Number(userInfo.id)
   } else {
-    currentUserId.value = 1 // 默认测试用户
+    currentUserId.value = null // 无法获取时保持空，比较逻辑不再依赖它
   }
 
   // 如果没有 conversationId，根据双方用户ID生成
