@@ -15,6 +15,36 @@ export const fileApi = {
    * @returns {Promise<Object>} { url, name, size }
    */
   uploadImage: (filePath, name = 'file') => {
+    // #ifdef H5
+    // 手机浏览器上 chooseImage 返回 blob: URL，uni.uploadFile 兼容性差，
+    // 改用 fetch+FormData 直传（修复手机上传图片后商品图片空白的问题）
+    if (/^blob:|^data:/.test(filePath) || (typeof location !== 'undefined' && location.protocol.startsWith('http'))) {
+      return new Promise(async (resolve, reject) => {
+        uni.showLoading({ title: '上传中...', mask: true })
+        try {
+          const blob = await (await fetch(filePath)).blob()
+          const fd = new FormData()
+          fd.append('file', blob, 'image_' + Date.now() + '.png')
+          const token = uni.getStorageSync('token') || ''
+          const cur = uni.getStorageSync('currentSchool')
+          const xhr = new XMLHttpRequest()
+          xhr.open('POST', (typeof BASE_URL !== 'undefined' ? BASE_URL : '') + BASE + '/upload')
+          if (token) xhr.setRequestHeader('Authorization', 'Bearer ' + token)
+          if (cur && cur.id) xhr.setRequestHeader('School-Id', cur.id)
+          xhr.onload = () => {
+            uni.hideLoading()
+            try {
+              const data = JSON.parse(xhr.responseText)
+              if (data.code === 200) { resolve(data.data) }
+              else { uni.showToast({ title: data.msg || '上传失败', icon: 'none' }); reject(data) }
+            } catch (e) { uni.showToast({ title: '上传失败', icon: 'none' }); reject(e) }
+          }
+          xhr.onerror = () => { uni.hideLoading(); uni.showToast({ title: '上传失败', icon: 'none' }); reject(new Error('network')) }
+          xhr.send(fd)
+        } catch (e) { uni.hideLoading(); reject(e) }
+      })
+    }
+    // #endif
     return new Promise((resolve, reject) => {
       // 从本地缓存获取 token
       const token = uni.getStorageSync('token') || ''

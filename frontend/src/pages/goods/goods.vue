@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!-- 二手市场列表?-->
   <view class="goods-page">
     <!-- 搜索?-->
@@ -133,8 +133,7 @@ async function loadGoodsList() {
     const data = await goodsApi.getGoodsList({
       keyword: keyword.value,
       category: currentCategory.value,
-      sortBy: sortBy.value,
-      priceAsc: priceAsc.value,
+      sort: sortBy.value === 'price' ? (priceAsc.value ? 'price_asc' : 'price_desc') : (sortBy.value === 'new' ? 'time_desc' : undefined),
       pageNum: 1,
       pageSize: 20
     })

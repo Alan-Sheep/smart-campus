@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!-- 校园跑腿?-->
   <view class="errand-page">
     <!-- 顶部Tab -->
@@ -105,7 +105,7 @@ const categories = ref([
   { id: 'all', name: '全部', color: '#6c4ee6' },
   { id: '0', name: '代买', color: '#52c41a' },
   { id: '1', name: '代取', color: '#1890ff' },
-  { id: '2', name: '代取', color: '#fa8c16' },
+  { id: '2', name: '代送', color: '#fa8c16' },
   { id: '3', name: '其他', color: '#722ed1' }
 ])
 

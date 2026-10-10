@@ -144,7 +144,7 @@ async function toggleLike() {
   const oldLiked = post.value.isLiked
   const oldCount = post.value.likeCount
   post.value.isLiked = !oldLiked
-  post.value.likeCount = oldCount + (post.value.isLiked ? 1 : -1)
+  post.value.likeCount = Math.max(0, oldCount + (post.value.isLiked ? 1 : -1))
 
   try {
     const liked = await channelApi.toggleLike(postId.value)

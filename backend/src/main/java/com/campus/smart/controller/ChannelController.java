@@ -191,6 +191,12 @@ public class ChannelController {
         }
 
         // 补充当前用户的点赞/收藏状态，供详情页高亮按钮
+// 统计真实点赞数（详情页此前不返回 likeCount，前端取消点赞会出现 0-1=-1）
+          LambdaQueryWrapper<LikeRecord> detailLikeWrapper = new LambdaQueryWrapper<>();
+          detailLikeWrapper.eq(LikeRecord::getTargetType, "0");
+          detailLikeWrapper.eq(LikeRecord::getTargetId, id);
+          post.setLikeCount((int) likeRecordService.count(detailLikeWrapper));
+
         Long userId = UserContext.getUserId();
         if (userId != null) {
             LambdaQueryWrapper<LikeRecord> likeWrapper = new LambdaQueryWrapper<>();

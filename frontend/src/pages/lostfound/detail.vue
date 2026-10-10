@@ -58,7 +58,7 @@
         </view>
       </view>
     </view>
-
+            + '&prefill=' + encodeURIComponent('你好，关于「' + (item.value.title || '') + '」')
     <!-- 底部操作栏 -->
     <view class="bottom-bar">
       <view class="bar-item" @click="contactPublisher">
@@ -90,59 +90,57 @@ onMounted(() => {
   loadDetail(id)
 })
 
-function loadDetail(id) {
-  // 模拟数据
-  item.value = {
-    id: id,
-    type: 'lost',
-    title: '寻找丢失的C语言课本',
-    description: '8月16日下午在图书馆二楼电脑室第二台电脑上放着一本《C语言程序设计》，书的封面有我写的名字，里面还有笔记。这本书对我很重要，马上要考试了，有看到的同学麻烦联系我，必有重谢！',
-    image: 'https://picsum.photos/750/500?random=30',
-    location: '图书馆二楼电脑室',
-    contact: '138****8888',
-    publisher: '同学A',
-    createTime: '2024-08-16'
+async function loadDetail(id) {
+  try {
+    const res = await lostFoundApi.getLostFoundDetail(id)
+    item.value = {
+      ...res,
+      image: (res.images || '').split(',').filter(Boolean)[0] || '',
+      publisher: res.nickname || ('同学' + String(res.userId || '').slice(-4))
+    }
+    item.value.userId = res.userId   // 发布人ID：私信跳转用
+  } catch (err) {
+    console.warn('失物详情加载失败:', err)
+    uni.showToast({ title: '详情加载失败', icon: 'none' })
   }
-
-  // 模拟AI匹配结果
-  if (item.value.type === 'lost') {
-    matchList.value = [
-      {
-        id: 101,
-        title: '捡到一本编程书',
-        image: 'https://picsum.photos/200/200?random=34',
-        location: '图书馆三楼',
-        similarity: 85
-      },
-      {
-        id: 102,
-        title: '图书馆捡到书一本',
-        image: 'https://picsum.photos/200/200?random=35',
-        location: '图书馆二楼',
-        similarity: 72
-      }
-    ]
-  }
-
-  // 真实接口
-  // lostFoundApi.getLostFoundDetail(id).then(res => {
-  //   item.value = res.data
-  //   // 如果是丢失物品，调用AI匹配
-  //   if (res.data.type === 'lost') {
-  //     lostFoundApi.matchLostItem(id).then(matchRes => {
-  //       matchList.value = matchRes.data
-  //     })
-  //   }
-  // })
 }
 
+/**
+ * 联系发布人（B方案：主推站内私信，避免手机号公开被骚扰）
+ * 未登录 → 先登录；自己是发布者 → 不需要联系
+ * 发布者填了联系电话 → 提供「拨打电话」备选项
+ */
 function contactPublisher() {
-  uni.showModal({
-    title: '联系方式',
-    content: item.value.contact,
-    showCancel: false
+  if (!item.value) return
+  const userInfo = uni.getStorageSync('userInfo')
+  if (!userInfo || !userInfo.id) {
+    uni.showModal({ title: '提示', content: '请先登录后再联系发布者', confirmText: '去登录',
+      success: (r) => { if (r.confirm) uni.navigateTo({ url: '/pages/login/login' }) } })
+    return
+  }
+  if (userInfo.id === item.value.userId) {
+    uni.showToast({ title: '这是你发布的', icon: 'none' })
+    return
+  }
+  const hasPhone = item.value.contact && !item.value.contact.includes('*')
+  uni.showActionSheet({
+    itemList: hasPhone ? ['发站内私信', '拨打电话'] : ['发站内私信'],
+    success: (r) => {
+      if (r.tapIndex === 0) {
+        // 跳转聊天页：带对方ID和昵称，预填一条消息
+        const nickname = encodeURIComponent(item.value.publisher || '失物发布者')
+        uni.navigateTo({
+          url: '/pages/message/chat?targetUserId=' + item.value.userId
+            + '&targetNickname=' + nickname
+            + '&prefill=' + encodeURIComponent('你好，关于「' + (item.value.title || '') + '」')
+        })
+      } else if (r.tapIndex === 1 && hasPhone) {
+        uni.makePhoneCall({ phoneNumber: item.value.contact })
+      }
+    }
   })
 }
+
 
 function handleAction() {
   if (item.value.type === 'lost') {

@@ -6,13 +6,18 @@ import com.campus.smart.common.Result;
 import com.campus.smart.entity.LostFound;
 import com.campus.smart.common.PageQuery;
 import com.campus.smart.common.ReqParams;
+import com.campus.smart.entity.User;
 import com.campus.smart.service.LostFoundService;
+import com.campus.smart.service.UserService;
 import com.campus.smart.utils.SchoolContext;
 import com.campus.smart.utils.UserContext;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,6 +28,9 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/api/lostfound")
 public class LostFoundController {
+
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private LostFoundService lostFoundService;
@@ -76,13 +84,31 @@ public class LostFoundController {
      */
     @Operation(summary = "失物招领详情")
     @GetMapping("/detail")
-    public Result<LostFound> detail(@RequestParam Long id) {
-        LostFound lostFound = lostFoundService.getById(id);
-        if (lostFound == null) {
-            return Result.error("记录不存在");
-        }
-        return Result.success(lostFound);
-    }
+    public Result<Map<String, Object>> detail(@RequestParam Long id) {
+          LostFound lostFound = lostFoundService.getById(id);
+          if (lostFound == null) {
+              return Result.error("记录不存在");
+          }
+          // 回填发布人昵称与联系电话（详情页"联系发布人"用）
+          Map<String, Object> data = new HashMap<>();
+          data.put("id", lostFound.getId());
+          data.put("userId", lostFound.getUserId());
+          data.put("type", lostFound.getType());
+          data.put("itemName", lostFound.getItemName());
+          data.put("description", lostFound.getDescription());
+          data.put("images", lostFound.getImages());
+          data.put("location", lostFound.getLocation());
+          data.put("status", lostFound.getStatus());
+          data.put("createTime", lostFound.getCreateTime());
+          if (lostFound.getUserId() != null) {
+              User publisher = userService.getById(lostFound.getUserId());
+              if (publisher != null) {
+                  data.put("nickname", publisher.getNickname());
+                  data.put("contact", publisher.getPhone());
+              }
+          }
+          return Result.success(data);
+      }
 
     /**
      * 发布

@@ -116,6 +116,10 @@ async function selectSchool(school) {
     content: '确定要切换到「' + school.name + '」吗？',
     success: async (res) => {
       if (res.confirm) {
+        // 判断进入本页的来源：登录引导（无上一页）还是普通切换（有上一页）
+        const pages = getCurrentPages()
+        const fromLoginGuide = pages.length <= 1
+
         try {
           // 调用切换学校接口
           await schoolApi.switchSchool(school.id)
@@ -123,21 +127,32 @@ async function selectSchool(school) {
           schoolStore.switchSchool(school)
           // 已登录用户：把学校归属绑定到账号（首次选择学校的用户会走到这里）
           await bindSchoolToUser(school.id)
-          // 返回上一页
-          setTimeout(() => {
-            uni.navigateBack()
-          }, 500)
+          goAfterSelect(fromLoginGuide)
         } catch (err) {
           // 接口失败，降级为只切换本地状态
           console.warn('切换学校接口失败，仅切换本地:', err)
           schoolStore.switchSchool(school)
-          setTimeout(() => {
-            uni.navigateBack()
-          }, 500)
+          goAfterSelect(fromLoginGuide)
         }
       }
     }
   })
+}
+
+/**
+ * 选完学校后的跳转
+ * 登录引导进入（页面栈只有本页）→ 不能 navigateBack（会没地方去），
+ * 直接 switchTab 回主页——修复「登录后选完学校停在选校页」的问题
+ * 普通切换 → 返回上一页
+ */
+function goAfterSelect(fromLoginGuide) {
+  setTimeout(() => {
+    if (fromLoginGuide) {
+      uni.switchTab({ url: '/pages/index/index' })
+    } else {
+      uni.navigateBack()
+    }
+  }, 500)
 }
 
 /**

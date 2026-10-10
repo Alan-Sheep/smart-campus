@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!-- 打印服务?-->
   <view class="print-page">
     <!-- 顶部说明 -->
@@ -248,29 +248,57 @@ function toggleColor(e) {
  * 调用真实文件上传接口
  */
 function uploadFile() {
-  // 选择文件
+  // #ifdef MP-WEIXIN
+  // 小程序端：chooseMessageFile（仅微信支持）
   uni.chooseMessageFile({
     count: 1,
     type: 'file',
     success: async (res) => {
       const file = res.tempFiles[0]
       formData.fileName = file.name
-
       try {
-        // 调用文件上传接口
-const uploadResult = await fileApi.uploadFile(file.path)
+        const uploadResult = await fileApi.uploadFile(file.path)
         formData.fileUrl = uploadResult.url || uploadResult.fileUrl || file.path
         uni.showToast({ title: '上传成功', icon: 'success' })
       } catch (err) {
-        // 上传失败
         console.warn('文件上传失败:', err)
-        formData.fileUrl = file.path // 保留本地路径作为降级
+        formData.fileUrl = file.path
       }
     },
     fail: () => {
       uni.showToast({ title: '已取消选择', icon: 'none' })
     }
   })
+  // #endif
+
+  // #ifndef MP-WEIXIN
+  // H5/手机浏览器：uni.chooseMessageFile 不支持，用隐藏 input[type=file]
+  // 修复：手机浏览器点"上传文件"无反应的问题
+  const input = document.createElement('input')
+  input.type = 'file'
+  input.accept = '.pdf,.doc,.docx,.ppt,.pptx,.jpg,.png,.jpeg'
+  input.style.display = 'none'
+  document.body.appendChild(input)
+  input.onchange = async (e) => {
+    const file = e.target.files[0]
+    if (!file) return
+    formData.fileName = file.name
+    uni.showLoading({ title: '上传中...' })
+    try {
+      const uploadResult = await fileApi.uploadFile(file)
+      formData.fileUrl = uploadResult.url || uploadResult.fileUrl || ''
+      uni.hideLoading()
+      uni.showToast({ title: '上传成功', icon: 'success' })
+    } catch (err) {
+      console.warn('文件上传失败:', err)
+      uni.hideLoading()
+      uni.showToast({ title: '上传失败，请重试', icon: 'none' })
+    } finally {
+      document.body.removeChild(input)
+    }
+  }
+  input.click()
+  // #endif
 }
 
 /**

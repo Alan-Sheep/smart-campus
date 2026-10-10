@@ -268,6 +268,108 @@ function validateForm() {
 /**
  * 保存地址（新增或编辑）
  */
+/**
+ * 高德定位填充（H5: 高德 JS API；小程序: uni.getLocation + 高德逆地理）
+ * Key：Web b8e2305360db8434bbcc0c0010392560 / 小程序 ecb1ccd0482b597998f789403b7e26af
+ */
+function locateByAmap() {
+  // #ifdef H5
+  uni.showLoading({ title: '定位中...' })
+  const ensureAmap = () => new Promise((resolve, reject) => {
+    if (window.AMap) return resolve(window.AMap)
+    const s = document.createElement('script')
+    s.src = 'https://webapi.amap.com/maps?v=2.0&key=b8e2305360db8434bbcc0c0010392560&plugin=AMap.Geocoder'
+    s.onload = () => resolve(window.AMap)
+    s.onerror = reject
+    document.head.appendChild(s)
+  })
+  ensureAmap().then(AMap => {
+    AMap.plugin('AMap.Geolocation', () => {
+      const geo = new AMap.Geolocation({ enableHighAccuracy: true, timeout: 10000 })
+      geo.getCurrentPosition((status, result) => {
+        uni.hideLoading()
+        if (status === 'complete' && result.position) {
+          const geocoder = new AMap.Geocoder()
+          geocoder.getAddress([result.position.lng, result.position.lat], (st, res) => {
+            if (st === 'complete' && res.regeocode) {
+              const comp = res.regeocode.addressComponent
+              form.province = (comp.province || '') + (comp.city || '') + (comp.district || '')
+              form.detail = (comp.township || '') + (comp.street || '') + (comp.streetNumber || '') || res.regeocode.formattedAddress
+              uni.showToast({ title: '已填入定位地址', icon: 'success' })
+            } else {
+              uni.showToast({ title: '定位成功但解析失败', icon: 'none' })
+            }
+          })
+        } else {
+          uni.showToast({ title: '定位失败，请手动输入', icon: 'none' })
+        }
+      })
+    })
+  }).catch(() => { uni.hideLoading(); uni.showToast({ title: '地图加载失败', icon: 'none' }) })
+  // #endif
+  // #ifdef MP-WEIXIN
+  uni.getLocation({
+    type: 'gcj02',
+    success: (loc) => {
+      uni.request({
+        url: 'https://restapi.amap.com/v3/geocode/regeo?key=ecb1ccd0482b597998f789403b7e26af&location='
+          + loc.longitude + ',' + loc.latitude,
+        success: (res) => {
+          if (res.data && res.data.regeocode) {
+            const comp = res.data.regeocode.addressComponent
+            form.province = (comp.province || '') + (comp.city || '') + (comp.district || '')
+            form.detail = (comp.township || '') + (comp.street || '') + (comp.streetNumber || '')
+            uni.showToast({ title: '已填入定位地址', icon: 'success' })
+          } else { uni.showToast({ title: '解析失败', icon: 'none' }) }
+        },
+        fail: () => uni.showToast({ title: '定位失败', icon: 'none' })
+      })
+    },
+    fail: () => uni.showToast({ title: '获取定位失败', icon: 'none' })
+  })
+  // #endif
+}
+
+/**
+ * 粘贴识别：从淘宝/美团/京东复制的地址文本自动抽取 姓名/电话/省市区/详细地址
+ */
+function pasteRecognize() {
+  // #ifdef H5
+  navigator.clipboard.readText().then(doRecognize).catch(() => {
+    uni.showToast({ title: '请授权剪贴板后重试', icon: 'none' })
+  })
+  // #endif
+  // #ifdef MP-WEIXIN
+  uni.getClipboardData({
+    success: (res) => doRecognize(res.data),
+    fail: () => uni.showToast({ title: '读取剪贴板失败', icon: 'none' })
+  })
+  // #endif
+}
+
+function doRecognize(text) {
+  if (!text || text.length < 5) { uni.showToast({ title: '剪贴板没有地址内容', icon: 'none' }); return }
+  const t = text.replace(/\r/g, ' ')
+  const phone = (t.match(/1[3-9]\d{9}/) || [''])[0]
+  let name = ''
+  const nameM = t.match(/([\u4e00-\u9fa5]{2,4})\s*1[3-9]\d{9}/)
+  if (nameM) name = nameM[1]
+  const regionM = t.match(/([^,，\s]+?(?:省|自治区))([^,，\s]+?(?:市|自治州|地区|盟))?([^,，\s]*?(?:区|县|市))/)
+  let detail = ''
+  if (regionM) {
+    const idx = t.indexOf(regionM[0])
+    detail = t.substring(idx + regionM[0].length).replace(/1[3-9]\d{9}/, '').trim()
+  } else {
+    const parts = t.split(/[\s,，]+/).filter(p => /[\u4e00-\u9fa5]{4,}/.test(p))
+    detail = parts.sort((a, b) => b.length - a.length)[0] || ''
+  }
+  if (regionM) form.province = (regionM[1] || '') + (regionM[2] || '') + (regionM[3] || '')
+  if (phone) form.phone = phone
+  if (detail) form.detail = detail.replace(/^[,，\s]+/, '')
+  if (name) form.name = name
+  uni.showToast({ title: '识别完成，请核对', icon: 'success' })
+}
+
 function saveAddress() {
   const error = validateForm()
   if (error) {

@@ -47,8 +47,7 @@ public class HomeController {
      * 支持 Java 8 时间类型的 Jackson ObjectMapper
      * 用于 Redis 缓存数据的类型转换
      */
-      @Autowired
-      private ObjectMapper objectMapper;
+      private final ObjectMapper objectMapper = com.campus.smart.config.RedisConfig.buildObjectMapper();
 
     /**
      * 首页数据（轮播图+公告+功能模块配置）

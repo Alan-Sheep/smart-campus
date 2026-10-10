@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!-- 发布校园跑腿页 -->
   <view class="publish-page">
     <!-- 表单 -->
@@ -65,14 +65,22 @@
 
       <view class="form-group">
         <text class="form-label">期望完成时间</text>
-        <picker mode="date" @change="onDateChange">
-          <view class="picker-input">
-            <text :class="{ placeholder: !formData.estimatedTime }">
-              {{ formData.estimatedTime || '请选择期望完成时间' }}
-            </text>
-            <text class="arrow">›</text>
-          </view>
-        </picker>
+        <view class="time-picker-row">
+          <picker mode="date" @change="onDateChange" class="time-picker-item">
+            <view class="picker-input">
+              <text :class="{ placeholder: !datePart }">
+                {{ datePart || '选择日期' }}
+              </text>
+            </view>
+          </picker>
+          <picker :range="timeSlots" @change="onTimeSlotChange" class="time-picker-item">
+            <view class="picker-input">
+              <text :class="{ placeholder: !timePart }">
+                {{ timePart || '选择时段' }}
+              </text>
+            </view>
+          </picker>
+        </view>
       </view>
 
       <view class="form-group">
@@ -110,6 +118,15 @@ const errandTypeList = [
   { value: '4', label: '其他' }
 ]
 
+// 期望完成时间拆成「日期 + 时段」两段选择（原仅日期，无法表达"下午三点"）
+const datePart = ref('')
+const timePart = ref('')
+const timeSlots = ['上午（9:00-12:00）', '中午（12:00-14:00）', '下午（14:00-18:00）', '晚上（18:00-21:00）', '不限']
+
+// 日期或时段变化时，合并写回 estimatedTime（提交字段不变）
+function syncEstimatedTime() {
+  formData.estimatedTime = [datePart.value, timePart.value].filter(Boolean).join(' ')
+}
 const formData = reactive({
   errandType: '',
   title: '',
@@ -139,6 +156,13 @@ function onTypeChange(e) {
  */
 function onDateChange(e) {
   formData.estimatedTime = e.detail.value
+  datePart.value = e.detail.value
+  syncEstimatedTime()
+}
+
+function onTimeSlotChange(e) {
+  timePart.value = timeSlots[e.detail.value]
+  syncEstimatedTime()
 }
 
 /**
@@ -212,6 +236,16 @@ function submitPublish() {
   background: #fff;
   margin-top: 20rpx;
   padding: 0 24rpx;
+}
+
+/* 期望完成时间两段选择 */
+.time-picker-row {
+  display: flex;
+  gap: 16rpx;
+}
+
+.time-picker-item {
+  flex: 1;
 }
 
 .form-group {

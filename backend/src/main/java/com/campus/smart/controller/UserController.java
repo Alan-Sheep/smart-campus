@@ -43,8 +43,7 @@ public class UserController {
     /**
      * Jackson 对象映射器（Spring Bean，已注册 JavaTimeModule 支持 LocalDateTime）
      */
-    @Autowired
-    private ObjectMapper objectMapper;
+    private final ObjectMapper objectMapper = com.campus.smart.config.RedisConfig.buildObjectMapper();
 
     /**
      * 发送短信验证码
