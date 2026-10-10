@@ -344,7 +344,8 @@ async function sendMessage() {
 
     // 发送成功，加入消息列表（加到前面，因为列表是倒序的）
     if (data) {
-      messageList.value = [data, ...messageList.value]
+      // fromUserId 归一化 Number：与 currentUserId 比较一致，否则自己发的第一条消息被判为对方（靠左）
+      messageList.value = [{ ...data, fromUserId: Number(data.fromUserId ?? currentUserId.value) }, ...messageList.value]
     }
   } catch (err) {
     console.warn('发送消息失败:', err)

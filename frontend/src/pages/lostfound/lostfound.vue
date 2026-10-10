@@ -403,14 +403,33 @@ function closeDetailModal() {
  * 联系发布? */
 function contactPublisher(item) {
   if (!checkLogin()) return
-  uni.showModal({
-    title: '联系方式',
-    content: '联系电话：138****8888',
-    showCancel: false,
-    confirmText: '知道了'
+  // 自己发布的物品不需要联系
+  const userInfo = uni.getStorageSync('userInfo')
+  if (userInfo && userInfo.id && userInfo.id === item.userId) {
+    uni.showToast({ title: '这是你发布的', icon: 'none' })
+    return
+  }
+  const hasPhone = item.contact && !String(item.contact).includes('*')
+  const opts = hasPhone ? ['发站内私信', '拨打电话'] : ['发站内私信']
+  uni.showActionSheet({
+    itemList: opts,
+    success: (r) => {
+      if (r.tapIndex === 0) {
+        // 站内私信：跳聊天页并预填消息
+        const nickname = encodeURIComponent(item.publisher || '失物发布者')
+        const prefill = encodeURIComponent('你好，关于「' + (item.title || item.itemName || '') + '」')
+        uni.navigateTo({
+          url: '/pages/message/chat?targetUserId=' + item.userId
+            + '&targetNickname=' + nickname
+            + '&prefill=' + prefill
+        })
+      } else if (r.tapIndex === 1 && hasPhone) {
+        uni.makePhoneCall({ phoneNumber: item.contact })
+      }
+    }
   })
 }
-</script>
+</script></script>
 
 <style lang="scss" scoped>
 .lostfound-page {
