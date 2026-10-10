@@ -38,7 +38,7 @@
         <view class="post-item" v-for="item in postList" :key="item.id" @click="goToDetail(item.id)">
           <!-- 作者信息 -->
           <view class="post-header">
-            <image :src="item.avatar" class="avatar"></image>
+            <image :src="item.avatar" class="avatar" lazy-load></image>
             <view class="author-info">
               <text class="nickname">{{ item.nickname }}</text>
               <text class="post-time">{{ item.createTime }}</text>

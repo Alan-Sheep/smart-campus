@@ -38,6 +38,14 @@ public class SchoolIdInterceptor implements HandlerInterceptor {
             return true;
         }
 
+        // ---- 低频接口 HTTP 缓存（弱网/隧道场景优化） ----
+        String uri = request.getRequestURI();
+        if (uri.equals("/api/school/list") || uri.equals("/api/home/bannerList")
+                || uri.equals("/api/home/noticeList") || uri.equals("/api/category/list")) {
+            response.setHeader("Cache-Control", "public, max-age=300");
+        }
+
+
         // ---- 学校ID ----
         String schoolIdStr = request.getHeader("School-Id");
         if (schoolIdStr != null && !schoolIdStr.isEmpty()) {

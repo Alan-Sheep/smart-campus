@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <!-- 校园活动列表?-->
   <view class="activity-page">
     <!-- 顶部Banner -->
@@ -28,7 +28,7 @@
         :key="item.id"
         @click="goToDetail(item.id)"
       >
-        <image :src="item.cover" class="activity-cover" mode="aspectFill"></image>
+        <image :src="item.cover" class="activity-cover" mode="aspectFill" lazy-load></image>
         <view class="activity-info">
           <view class="activity-header">
             <text class="activity-title">{{ item.title }}</text>

@@ -82,13 +82,15 @@ public class GoodsController {
         wrapper.eq(Goods::getStatus, 1);
 
         // 排序
-        if ("price_asc".equals(sort)) {
-            wrapper.orderByAsc(Goods::getPrice);
-        } else if ("price_desc".equals(sort)) {
-            wrapper.orderByDesc(Goods::getPrice);
-        } else {
-            wrapper.orderByDesc(Goods::getCreateTime);
-        }
+                  // 排序：价格升降序 / 最新（时间倒序）。
+          // 次级排序键用 id：演示数据 create_time 相同秒级时保证稳定顺序
+          if ("price_asc".equals(sort)) {
+              wrapper.orderByAsc(Goods::getPrice).orderByDesc(Goods::getId);
+          } else if ("price_desc".equals(sort)) {
+              wrapper.orderByDesc(Goods::getPrice).orderByDesc(Goods::getId);
+          } else {
+              wrapper.orderByDesc(Goods::getId);  // 最新：id 自增即时间序
+          }
 
         Page<Goods> page = new Page<>(pageQuery.getPageNum(), pageQuery.getPageSize());
         Page<Goods> result = goodsService.page(page, wrapper);

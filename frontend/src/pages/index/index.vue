@@ -39,7 +39,7 @@
           indicator-active-color="#fff"
         >
           <swiper-item v-for="item in bannerList" :key="item.id" @click="onBannerClick(item)">
-            <image :src="item.image" mode="aspectFill" class="banner-image"></image>
+            <image :src="item.image" mode="aspectFill" lazy-load class="banner-image"></image>
           </swiper-item>
         </swiper>
       </view>
@@ -86,7 +86,7 @@
             :key="item.id"
             @click="goToActivityDetail(item.id)"
           >
-            <image :src="item.cover" mode="aspectFill" class="activity-cover"></image>
+            <image :src="item.cover" mode="aspectFill" lazy-load class="activity-cover"></image>
             <view class="activity-info">
               <text class="activity-title">{{ item.title }}</text>
               <text class="activity-meta">🕐{{ item.time }}</text>

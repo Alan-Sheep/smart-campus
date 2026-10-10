@@ -46,7 +46,7 @@
         :key="item.id"
         @click="goToDetail(item.id)"
       >
-        <image :src="item.images && item.images[0]" class="goods-image" mode="aspectFill"></image>
+        <image :src="item.images && item.images[0]" class="goods-image" mode="aspectFill" lazy-load></image>
         <view class="goods-info">
           <text class="goods-title">{{ item.title }}</text>
           <text class="goods-price">¥{{ item.price }}</text>

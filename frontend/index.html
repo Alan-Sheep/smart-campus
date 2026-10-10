@@ -2,11 +2,20 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 禁用缓存：确保手机端总能拿到最新代码（演示/开发场景） -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>智慧校园</title>
   </head>
   <body>
     <div id="app"></div>
+    <script>
+      // 缓存破除：为模块请求追加时间戳，防止手机浏览器使用旧缓存
+      // （配合 vite 的模块路径，保证 src/main.js 每次都拉最新）
+      window.__APP_VERSION = 'v1.0.10'
+    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
