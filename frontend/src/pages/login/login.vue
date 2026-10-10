@@ -21,12 +21,12 @@
           class="login-tab"
           :class="{ active: loginType === 'email' }"
           @click="switchLoginType('email')"
-        >邮箱登录</view>
+        >邮箱</view>
         <view
           class="login-tab"
           :class="{ active: loginType === 'phone' }"
           @click="switchLoginType('phone')"
-        >手机号登录</view>
+        >手机号</view>
       </view>
 
       <!-- 邮箱登录 -->
@@ -355,6 +355,29 @@ async function handleWxLogin() {
 }
 
 /* 登录表单 */
+/* 登录方式切换 */
+.login-tabs {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 32rpx;
+}
+
+.login-tab {
+  flex: 1;
+  text-align: center;
+  padding: 18rpx 0;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  color: #666;
+  background: #f5f5f7;
+  transition: all 0.2s;
+
+  &.active {
+    color: #fff;
+    background: linear-gradient(135deg, #6c4ee6 0%, #8b5cf6 100%);
+    font-weight: 600;
+  }
+}
 .login-form {
   margin-bottom: 80rpx;
 }

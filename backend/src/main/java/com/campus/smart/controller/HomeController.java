@@ -47,16 +47,8 @@ public class HomeController {
      * 支持 Java 8 时间类型的 Jackson ObjectMapper
      * 用于 Redis 缓存数据的类型转换
      */
-    private final ObjectMapper objectMapper;
-
-    public HomeController() {
-        this.objectMapper = new ObjectMapper();
-        JavaTimeModule javaTimeModule = new JavaTimeModule();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(formatter));
-        javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(formatter));
-        this.objectMapper.registerModule(javaTimeModule);
-    }
+      @Autowired
+      private ObjectMapper objectMapper;
 
     /**
      * 首页数据（轮播图+公告+功能模块配置）

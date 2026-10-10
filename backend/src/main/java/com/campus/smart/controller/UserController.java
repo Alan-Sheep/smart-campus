@@ -41,9 +41,10 @@ public class UserController {
     private EmailCodeService emailCodeService;
 
     /**
-     * Jackson 对象映射器，用于 Redis 缓存数据的类型转换
+     * Jackson 对象映射器（Spring Bean，已注册 JavaTimeModule 支持 LocalDateTime）
      */
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    @Autowired
+    private ObjectMapper objectMapper;
 
     /**
      * 发送短信验证码

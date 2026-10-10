@@ -31,6 +31,13 @@ export const userApi = {
   sendCode: (phone) => request.get(BASE + '/sendCode', { phone }),
 
   /**
+   * 发送邮箱验证码
+   * @param {string} email 邮箱
+   * @returns {Promise<{mock:boolean, code?:string}>} mock=true 开发模式（验证码直接返回）
+   */
+  sendEmailCode: (email) => request.get(BASE + '/sendEmailCode', { email }),
+
+  /**
    * 获取当前登录用户信息
    * @returns {Promise<Object>} 用户信息对象
    */

@@ -36,7 +36,8 @@ public class RedisConfig {
     /**
      * 构建支持 Java 8 时间类型的 Jackson ObjectMapper
      */
-    private ObjectMapper buildObjectMapper() {
+    @Bean
+    public ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
         objectMapper.activateDefaultTyping(LaissezFaireSubTypeValidator.instance,
@@ -65,7 +66,7 @@ public class RedisConfig {
         template.setConnectionFactory(factory);
 
         GenericJackson2JsonRedisSerializer jsonSerializer =
-                new GenericJackson2JsonRedisSerializer(buildObjectMapper());
+                new GenericJackson2JsonRedisSerializer(objectMapper());
 
         // key 用 String 序列化
         template.setKeySerializer(new StringRedisSerializer());
@@ -83,7 +84,7 @@ public class RedisConfig {
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory factory) {
         GenericJackson2JsonRedisSerializer jsonSerializer =
-                new GenericJackson2JsonRedisSerializer(buildObjectMapper());
+                new GenericJackson2JsonRedisSerializer(objectMapper());
 
         RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig()
                 // 默认缓存 30 分钟
