@@ -8,18 +8,25 @@
 /**
  * 后端接口基础地址
  *
- * - H5 浏览器环境：使用相对路径（配合 Nginx 反向代理，无跨域问题）
- *   访问地址：http://localhost/  （Nginx 统一入口）
+ * - H5 浏览器环境：
+ *   - 本地开发（localhost 访问）：相对路径，走 vite 代理，无跨域问题
+ *   - 公网演示（cpolar 隧道域名访问）：必须指向后端隧道地址，
+ *     否则访客浏览器会把 /api 请求发到访客自己机器的 localhost 导致全部失败
+ *   判定：访问地址含 cpolar.top（隧道域名）时走公网后端，否则走同源代理
  *
  * - 微信小程序等其他环境：使用 localhost
  *   小程序没有跨域限制，直接访问本地接口
  *   上线时换成公网地址（cpolar 或服务器域名）
  */
 // #ifdef H5
-export const BASE_URL = ''
+const _isTunnel = typeof location !== 'undefined' && location.hostname.includes('cpolar.top')
+// 页面是 https（cpolar 隧道默认 https）时，API 必须同为 https，否则浏览器拦截混合内容
+export const BASE_URL = _isTunnel
+  ? (location.protocol === 'https:' ? 'https://c88f74.r16.cpolar.top' : 'http://c88f74.r16.cpolar.top')
+  : ''
 // #endif
 // #ifndef H5
-export const BASE_URL = 'http://localhost:8080'
+export const BASE_URL = 'https://c88f74.r16.cpolar.top'
 // #endif
 
 /**
