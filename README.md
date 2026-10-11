@@ -54,37 +54,51 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 
 ## 📸 项目效果图
 
+### 用户端（uni-app · H5 / 微信小程序）
+
 <div align="center">
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/index.png" width="220"/><br/><b>🏠 首页</b></td>
-    <td align="center"><img src="docs/screenshots/login.png" width="220"/><br/><b>🔐 邮箱验证码登录</b></td>
-    <td align="center"><img src="docs/screenshots/channel.png" width="220"/><br/><b>📢 校园频道</b></td>
+    <td align="center"><img src="docs/screenshots/index.png" width="200"/><br/><b>🏠 首页</b></td>
+    <td align="center"><img src="docs/screenshots/login.png" width="200"/><br/><b>🔐 邮箱验证码登录</b></td>
+    <td align="center"><img src="docs/screenshots/channel.png" width="200"/><br/><b>📢 校园频道</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/express.png" width="220"/><br/><b>📦 快递代取</b></td>
-    <td align="center"><img src="docs/screenshots/goods.png" width="220"/><br/><b>🛒 二手市场</b></td>
-    <td align="center"><img src="docs/screenshots/activity.png" width="220"/><br/><b>🎉 校园活动</b></td>
+    <td align="center"><img src="docs/screenshots/goods.png" width="200"/><br/><b>🛒 二手市场</b></td>
+    <td align="center"><img src="docs/screenshots/express.png" width="200"/><br/><b>📦 快递代取</b></td>
+    <td align="center"><img src="docs/screenshots/activity.png" width="200"/><br/><b>🎉 校园活动</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/game.png" width="220"/><br/><b>🎮 游戏搭子</b></td>
-    <td align="center"><img src="docs/screenshots/lostfound.png" width="220"/><br/><b>🔍 失物招领</b></td>
-    <td align="center"><img src="docs/screenshots/message.png" width="220"/><br/><b>✉️ 消息中心</b></td>
+    <td align="center"><img src="docs/screenshots/game.png" width="200"/><br/><b>🎮 游戏搭子</b></td>
+    <td align="center"><img src="docs/screenshots/lostfound.png" width="200"/><br/><b>🔍 失物招领</b></td>
+    <td align="center"><img src="docs/screenshots/message.png" width="200"/><br/><b>✉️ 消息中心</b></td>
   </tr>
 </table>
-<p><img src="docs/screenshots/admin-login.png" width="680"/><br/><b>🖥️ 管理端 · 数据审核与看板</b>（另有：打印服务 · 校园跑腿 · 代课服务 · 学校切换，详见源码）</p>
+<p><i>另有：打印服务 · 校园跑腿 · 代课服务 · 学校切换 · 我的收藏 · 个人中心（详见源码）</i></p>
+</div>
+
+### 管理端（Vue3 + Element Plus + ECharts）
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/admin-dashboard.png" width="420"/><br/><b>📊 数据概览（用户增长趋势 · 业务占比）</b></td>
+    <td align="center"><img src="docs/screenshots/admin-audit-post.png" width="420"/><br/><b>📝 内容审核 · 帖子审核</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/admin-user.png" width="420"/><br/><b>👥 用户管理</b></td>
+    <td align="center"><img src="docs/screenshots/admin-school.png" width="420"/><br/><b>🏫 学校管理</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/admin-order-express.png" width="420"/><br/><b>📦 订单管理 · 快递代取</b></td>
+    <td align="center"><img src="docs/screenshots/admin-audit-goods.png" width="420"/><br/><b>🛒 商品审核</b></td>
+  </tr>
+</table>
 </div>
 
 ---
 
-## ✨ 核心设计与亮点
-
-> 💡 以下每个点都有真实代码支撑，欢迎按图索骥
-
-### 🔐 认证与安全
-
-| 设计点 | 实现 | 代码位置 |
-|---|---|---|
+## ✨ 核心设计与亮点---|---|---|
 | 邮箱验证码登录 | SMTP 真实发送 + 开发模式 Mock 切换（配置驱动） | [EmailCodeService](backend/src/main/java/com/campus/smart/service/EmailCodeService.java) |
 | 三层防刷 | 同邮箱 60s 重发间隔 + 单邮箱单日上限 + 同 IP 单日上限（全部 Redis 后端强校验） | 同上 |
 | 防暴力破解 | 验证码错误 5 次锁定 30 分钟，锁定期间禁止重发 | 同上 |
