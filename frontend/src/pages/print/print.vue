@@ -93,11 +93,11 @@
       </view>
       <view class="form-row">
         <text class="form-label">联系电话</text>
-        <input class="form-input" type="number" placeholder="请输入联系电话"? v-model="formData.phone" />
+<input class="form-input" type="number" placeholder="请输入联系电话" v-model="formData.phone" />
       </view>
       <view class="form-row">
         <text class="form-label">备注说明</text>
-        <input class="form-input" placeholder="如有特殊要求请备注"? v-model="formData.remark" />
+<input class="form-input" placeholder="如有特殊要求请备注" v-model="formData.remark" />
       </view>
     </view>
 
