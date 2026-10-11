@@ -153,12 +153,28 @@ JDK 21+ · MySQL 8+ · Redis 6+ · Node.js 16+ · Maven 3.6+
 
 ### 1️⃣ 初始化数据库
 
+**方式一（推荐）：一键导入完整快照**
+
+```bash
+mysql -uroot -p < sql/smart_campus_full_dump.sql
+```
+
+> 包含 23 张表结构 + 全部演示数据（60 用户 / 33 帖子 / 570+ 订单 / 300 活动 / 聊天互动），一条命令即可跑起完整项目
+
+**方式二：分步执行迁移脚本**
+
 ```bash
 mysql -uroot -p < sql/init.sql
 mysql -uroot -p < sql/full_init.sql
 mysql -uroot -p < sql/update_v3_user_features.sql
 mysql -uroot -p < sql/update_v4_school_data_seed.sql
 mysql -uroot -p < sql/update_v5_email_login.sql
+mysql -uroot -p < sql/update_v6_perf_indexes.sql
+mysql -uroot -p < sql/update_v7a_users.sql
+mysql -uroot -p < sql/update_v7b_posts.sql
+mysql -uroot -p < sql/update_v7c_interactions.sql
+mysql -uroot -p < sql/update_v7d_orders.sql
+mysql -uroot -p < sql/update_v7e_signup_chat.sql
 ```
 
 > 内置 15 所重庆高校 + **600+ 条业务演示数据**（60 个用户、33 篇帖子、570+ 订单、300 场活动、391 件商品、聊天/评论/点赞互动），启动即可看到完整页面效果
