@@ -1,0 +1,11 @@
+USE smart_campus;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 10, 1, '0', '蓝牙耳机 左耳', '昨晚在操场看台丢的，里面有重要聊天记录，必有重谢！', '图书馆', 0, 1 FROM user WHERE id=10;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 16, 2, '0', '黑色钱包', '内含身份证和银行卡，在二食堂附近丢失，拾到者请联系', '食堂', 0, 1 FROM user WHERE id=16;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 36, 3, '1', '一把宿舍钥匙', '在三教201捡到，钥匙上有小熊挂件', '操场', 1, 1 FROM user WHERE id=36;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 34, 4, '1', '金色手表', '在操场跑道内圈捡到，表盘有划痕', '教学楼', 1, 1 FROM user WHERE id=34;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 11, 5, '0', '粉色保温杯', '图书馆三楼自习室，杯身贴有小猫贴纸', '宿舍楼', 0, 1 FROM user WHERE id=11;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 54, 10, '1', 'AirPods 耳机盒', '白色充电盒，在一食堂二楼餐桌上的Lost and Found', '图书馆', 1, 1 FROM user WHERE id=54;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 19, 11, '0', '考研政治复习资料', '一沓打印资料夹在蓝色文件夹里，在教学楼A栋遗失', '食堂', 0, 1 FROM user WHERE id=19;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 29, 12, '1', '黑色雨伞', '长柄自动伞，伞柄有木纹，放在传达室了', '操场', 1, 1 FROM user WHERE id=29;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 51, 13, '0', '校园卡', '卡号尾号8877，捡到请务必联系，卡里还有钱', '教学楼', 0, 1 FROM user WHERE id=51;
+INSERT INTO lost_found (user_id, school_id, type, item_name, description, location, status, audit_status) SELECT 39, 14, '1', '银色水杯', '保温杯底部有划痕，在三教楼梯间捡到', '宿舍楼', 1, 1 FROM user WHERE id=39;
