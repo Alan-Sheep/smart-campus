@@ -52,6 +52,31 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 
 ---
 
+## 📸 项目效果图
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/index.png" width="220"/><br/><b>🏠 首页</b></td>
+    <td align="center"><img src="docs/screenshots/login.png" width="220"/><br/><b>🔐 邮箱验证码登录</b></td>
+    <td align="center"><img src="docs/screenshots/channel.png" width="220"/><br/><b>📢 校园频道</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/express.png" width="220"/><br/><b>📦 快递代取</b></td>
+    <td align="center"><img src="docs/screenshots/goods.png" width="220"/><br/><b>🛒 二手市场</b></td>
+    <td align="center"><img src="docs/screenshots/activity.png" width="220"/><br/><b>🎉 校园活动</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/screenshots/game.png" width="220"/><br/><b>🎮 游戏搭子</b></td>
+    <td align="center"><img src="docs/screenshots/lostfound.png" width="220"/><br/><b>🔍 失物招领</b></td>
+    <td align="center"><img src="docs/screenshots/message.png" width="220"/><br/><b>✉️ 消息中心</b></td>
+  </tr>
+</table>
+<p><i>另有：打印服务 · 校园跑腿 · 代课服务 · 学校切换 · 管理端（详见源码）</i></p>
+</div>
+
+---
+
 ## ✨ 核心设计与亮点
 
 > 💡 以下每个点都有真实代码支撑，欢迎按图索骥
