@@ -6,8 +6,8 @@
       <view class="nav-back" @click="goBack">
         <text class="back-icon">‹</text>
       </view>
-      <view class="nav-title">{{ pageTitle }}</view>
-      <view class="nav-right" @click="markAllRead">
+      <view class="nav-title" :style="navContentHeight !== 44 ? { lineHeight: navContentHeight + 'px' } : {}">{{ pageTitle }}</view>
+      <view class="nav-right" :style="capsuleLeft ? { marginRight: '12px', maxWidth: (capsuleLeft - 90) + 'px' } : {}" @click="markAllRead">
         <text class="read-all">全部已读</text>
       </view>
     </view>
@@ -80,6 +80,15 @@ onMounted(() => {
   const sysInfo = uni.getSystemInfoSync()
   statusBarHeight.value = sysInfo.statusBarHeight || 20
   navHeight.value = statusBarHeight.value + 44
+
+  // 小程序端：右上角胶囊按钮占位，"全部已读"需避开
+  // #ifdef MP-WEIXIN
+  try {
+    const mb = uni.getMenuButtonBoundingClientRect()
+    capsuleLeft.value = mb.left
+    navContentHeight.value = mb.height + (mb.top - statusBarHeight.value) * 2
+  } catch (e) { /* H5 无胶囊 */ }
+  // #endif
 
   const pages = getCurrentPages()
   const currentPage = pages[pages.length - 1]

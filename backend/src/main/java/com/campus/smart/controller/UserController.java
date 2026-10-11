@@ -233,8 +233,10 @@ public class UserController {
         }
         // 微信登录
         else if (wxCode != null && !wxCode.isEmpty()) {
-            // 模拟微信登录，用code当openid
-            String openid = "wx_" + wxCode;
+            // 微信登录（演示模式）：真实项目应调 code2session 接口换取 openid
+            // 个人主体无法开通该接口权限，此处用固定 openid 保证同一微信稳定登录同一账号
+            // TODO: 企业资质后替换为真实 code2session 调用
+            String openid = "wx_demo_user";
             LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
             wrapper.eq(User::getOpenid, openid);
             user = userService.getOne(wrapper);

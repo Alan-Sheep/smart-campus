@@ -131,6 +131,7 @@
  */
 import { ref, reactive } from 'vue'
 import { onLoad, onShow } from '@dcloudio/uni-app'
+import { BASE_URL } from '@/utils/request'
 
 const STORAGE_KEY = 'addressList'
 
@@ -321,11 +322,23 @@ function locateByAmap() {
   uni.getLocation({
     type: 'gcj02',
     success: (loc) => {
+      // 走后端代理：小程序 request 域名白名单不含 restapi.amap.com，直接调会被拦截
+      const token = uni.getStorageSync('token') || ''
+      const cur = uni.getStorageSync('currentSchool')
       uni.request({
-        url: 'https://restapi.amap.com/v3/geocode/regeo?key=ecb1ccd0482b597998f789403b7e26af&location='
+        url: (typeof BASE_URL !== 'undefined' ? BASE_URL : '') + '/api/amap/regeo?location='
           + loc.longitude + ',' + loc.latitude,
+        header: {
+          'Authorization': token ? 'Bearer ' + token : '',
+          'School-Id': cur ? (cur.id || 1) : 1
+        },
         success: (res) => {
-          if (res.data && res.data.regeocode) {
+          // 后端代理返回的是高德原始 JSON 字符串（包在 Result.data 里）
+          let amapData = res.data
+          if (amapData && amapData.code === 200 && typeof amapData.data === 'string') {
+            try { amapData = JSON.parse(amapData.data) } catch (e) {}
+          }
+          if (amapData && amapData.regeocode) {
             const comp = res.data.regeocode.addressComponent
                 form.province = String(comp.province || '') + String(Array.isArray(comp.city) ? '' : (comp.city || '')) + String(comp.district || '')
                 form.detail = [comp.township, comp.street, comp.streetNumber && (comp.streetNumber.number || comp.streetNumber)].filter(Boolean).join('') || (res.data.regeocode.formattedAddress || '')

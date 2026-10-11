@@ -126,3 +126,7 @@ springdoc:
 logging:
   level:
     com.campus.smart: debug
+
+# 高德地图（小程序定位代理用）
+amap:
+  key: b50aabb61744c7139d6e628f8ea1c949
