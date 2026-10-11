@@ -259,6 +259,10 @@ onUnmounted(() => {
 // 页面隐藏/显示时暂停与恢复轮询，避免后台白白请求
 onHide(() => stopPolling())
 onShow(() => {
+  scrollToTop()
+  // 兜底：小程序端 onMounted 与消息加载的时序差可能导致 isMine 计算时
+  // targetUserId 尚未赋值（NaN→全部误判为对方）。这里统一重算。
+  messageList.value = messageList.value.map(normalizeMessage)
   if (!pollTimer && conversationId.value) {
     pollTimer = setInterval(pollNewMessages, 3000)
   }
