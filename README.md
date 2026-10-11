@@ -72,7 +72,7 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
     <td align="center"><img src="docs/screenshots/message.png" width="220"/><br/><b>✉️ 消息中心</b></td>
   </tr>
 </table>
-<p><i>另有：打印服务 · 校园跑腿 · 代课服务 · 学校切换 · 管理端（详见源码）</i></p>
+<p><img src="docs/screenshots/admin-login.png" width="680"/><br/><b>🖥️ 管理端 · 数据审核与看板</b>（另有：打印服务 · 校园跑腿 · 代课服务 · 学校切换，详见源码）</p>
 </div>
 
 ---
