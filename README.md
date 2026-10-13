@@ -73,6 +73,9 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
     <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/lostfound.png" width="200"/><br/><b>🔍 失物招领</b></td>
     <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/message.png" width="200"/><br/><b>✉️ 消息中心</b></td>
   </tr>
+  <tr>
+    <td colspan="3" align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat.png" width="300"/><br/><b>🤖 AI 智能问答助手（RAG · 幻觉抑制 · 流式输出）</b></td>
+  </tr>
 </table>
 <p><i>另有：打印服务 · 校园跑腿 · 代课服务 · 学校切换 · 我的收藏 · 个人中心（详见源码）</i></p>
 </div>
