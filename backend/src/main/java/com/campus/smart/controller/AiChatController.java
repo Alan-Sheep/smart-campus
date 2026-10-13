@@ -55,7 +55,7 @@ public class AiChatController {
     private StringRedisTemplate redisTemplate;
 
     /** 缓存 key 前缀与有效期 */
-    private static final String CACHE_KEY_PREFIX = "campus:ai:qa:";
+    private static final String CACHE_KEY_PREFIX = "campus:ai:qa:v2:";
     private static final Duration CACHE_TTL = Duration.ofHours(24);
 
     /**
