@@ -59,24 +59,24 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 <div align="center">
 <table>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/index.png" width="200"/><br/><b>🏠 首页</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/login.png" width="200"/><br/><b>🔐 邮箱验证码登录</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/channel.png" width="200"/><br/><b>📢 校园频道</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/index.png?v=2" width="200"/><br/><b>🏠 首页</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/login.png?v=2" width="200"/><br/><b>🔐 邮箱验证码登录</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/channel.png?v=2" width="200"/><br/><b>📢 校园频道</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/goods.png" width="200"/><br/><b>🛒 二手市场</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/express.png" width="200"/><br/><b>📦 快递代取</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/activity.png" width="200"/><br/><b>🎉 校园活动</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/goods.png?v=2" width="200"/><br/><b>🛒 二手市场</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/express.png?v=2" width="200"/><br/><b>📦 快递代取</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/activity.png?v=2" width="200"/><br/><b>🎉 校园活动</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/game.png" width="200"/><br/><b>🎮 游戏搭子</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/lostfound.png" width="200"/><br/><b>🔍 失物招领</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/message.png" width="200"/><br/><b>✉️ 消息中心</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/game.png?v=2" width="200"/><br/><b>🎮 游戏搭子</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/lostfound.png?v=2" width="200"/><br/><b>🔍 失物招领</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/message.png?v=2" width="200"/><br/><b>✉️ 消息中心</b></td>
   </tr>
   <tr>
     <td colspan="3" align="center">
-      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat-2.png" width="320"/>
-      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat.png" width="320"/>
+      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat-2.png?v=2" width="320"/>
+      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat.png?v=2" width="320"/>
       <br/><b>🤖 AI 智能问答助手（RAG · 多轮对话 · 幻觉抑制 · 流式输出）</b>
     </td>
   </tr>
@@ -89,16 +89,16 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 <div align="center">
 <table>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-dashboard.png" width="420"/><br/><b>📊 数据概览（用户增长趋势 · 业务占比）</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-audit-post.png" width="420"/><br/><b>📝 内容审核 · 帖子审核</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-dashboard.png?v=2" width="420"/><br/><b>📊 数据概览（用户增长趋势 · 业务占比）</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-audit-post.png?v=2" width="420"/><br/><b>📝 内容审核 · 帖子审核</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-user.png" width="420"/><br/><b>👥 用户管理</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-school.png" width="420"/><br/><b>🏫 学校管理</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-user.png?v=2" width="420"/><br/><b>👥 用户管理</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-school.png?v=2" width="420"/><br/><b>🏫 学校管理</b></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-order-express.png" width="420"/><br/><b>📦 订单管理 · 快递代取</b></td>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-audit-goods.png" width="420"/><br/><b>🛒 商品审核</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-order-express.png?v=2" width="420"/><br/><b>📦 订单管理 · 快递代取</b></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/admin-audit-goods.png?v=2" width="420"/><br/><b>🛒 商品审核</b></td>
   </tr>
 </table>
 </div>
