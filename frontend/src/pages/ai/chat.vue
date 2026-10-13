@@ -34,15 +34,11 @@
         </view>
       </view>
 
-      <view
-        class="msg-row"
-        v-for="(msg, index) in messages"
-        :key="index"
-        :class="{ 'is-mine': msg.isMine }"
-      >
-        <!-- 时间 -->
+      <template v-for="(msg, index) in messages" :key="index">
+        <!-- 时间：独立居中行 -->
         <view class="msg-time" v-if="msg.time">{{ msg.time }}</view>
 
+        <view class="msg-row" :class="{ 'is-mine': msg.isMine }">
         <!-- 头像 -->
         <view class="avatar-box">
           <view v-if="msg.isMine" class="avatar my-avatar">
@@ -59,7 +55,8 @@
             <text class="bubble-text">{{ msg.content }}<text v-if="msg.typing" class="cursor">▌</text></text>
           </view>
         </view>
-      </view>
+        </view>
+      </template>
 
       <view style="height: 30rpx"></view>
     </scroll-view>
