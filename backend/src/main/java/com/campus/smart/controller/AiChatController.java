@@ -5,6 +5,7 @@ import com.campus.smart.common.Result;
 import com.campus.smart.entity.AiChatRecord;
 import com.campus.smart.entity.AiKnowledge;
 import com.campus.smart.mapper.AiChatRecordMapper;
+import com.campus.smart.service.AiAgentService;
 import com.campus.smart.service.DeepSeekService;
 import com.campus.smart.service.KnowledgeIngestService;
 import com.campus.smart.service.RagRetriever;
@@ -20,6 +21,7 @@ import java.security.MessageDigest;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -41,6 +43,12 @@ public class AiChatController {
 
     @Autowired
     private DeepSeekService deepSeekService;
+
+    @Autowired
+    private AiAgentService aiAgentService;
+
+    @Autowired
+    private com.campus.smart.service.ai.AiToolRegistry toolRegistry;
 
     @Autowired
     private KnowledgeIngestService ingestService;
@@ -87,32 +95,19 @@ public class AiChatController {
             return emitter;
         }
 
-        // 2. RAG 检索召回知识片段
+        // 2. RAG 预检索：召回知识片段，保证基础问答能力
         List<RagRetriever.Retrieved> retrieved =
                 retriever.retrieve(question, 5, 0.003);
 
-        // 3. 组装受控提示词：检索结果拼装为参考资料，缺失时模型须明确告知
-        List<DeepSeekService.ChatMessage> messages = new ArrayList<>();
-        messages.add(new DeepSeekService.ChatMessage("user", buildUserPrompt(question, retrieved)));
-
-        // 4. 流式生成；完成后缓存高频问答并落库
-        StringBuilder fullAnswer = new StringBuilder();
-        SseEmitter wrapper = new SseEmitter(60_000L);
-        SseEmitter bridge = new SseEmitter(60_000L);
-
-        // 用一个中间发射器桥接 DeepSeekService 的输出
-        SseEmitter bridging = new SseEmitter(60_000L) {};
-        // 简化：直接传 emitter 给 service，但回调里做缓存/落库
+        // 3. 交给 Agent 编排：模型可自主决定"直接回答"或"调用工具查实时数据"
         String retrievedIds = retrieved.stream()
                 .map(r -> r.knowledge.getId().toString())
                 .collect(Collectors.joining(","));
 
-        // 直接调用流式，注册一个包装 emitter 处理完成事件
         try {
             emitter.onCompletion(() -> { });
             emitter.onTimeout(() -> log.warn("[AI] SSE 超时"));
-            // 流式：完成后做缓存与落库（在 service 回调之外处理，见下方 chatWithCallback）
-            doChatWithCallback(messages, emitter, cacheKey, userId, question, retrievedIds, start);
+            doAgentChat(retrieved, emitter, cacheKey, userId, question, retrievedIds, start);
         } catch (Exception e) {
             log.error("[AI] 问答处理异常", e);
             saveRecord(userId, question, null, retrievedIds, false,
@@ -122,25 +117,32 @@ public class AiChatController {
     }
 
     /**
-     * 带完成回调的流式问答：完成后写缓存 + 落库
+     * Agent 问答：多轮工具调用 + 结果推送
+     *
+     * <p>为什么用"同步跑完 Agent 再分片推送"而不是全程流式：
+     * Agent 每一轮都要拿到<b>完整</b>的模型响应，才能判断这次是"直接回答"还是"要调工具"，
+     * 中间过程无法流式；只有最终答案需要打字机效果。</p>
      */
-    private void doChatWithCallback(List<DeepSeekService.ChatMessage> messages,
-                                    SseEmitter emitter, String cacheKey,
-                                    Long userId, String question,
-                                    String retrievedIds, long start) {
-        // DeepSeekService.chatStream 完成时发 done 事件——这里无法直接拦截其内部线程，
-        // 故采用包装：用独立的线程监听完成事件过于复杂，
-        // 改为：同步获取完整回答（非流式）→ 缓存/落库 → 再把完整文本通过 SSE 一次性推送（分段模拟流式）
-        //权衡说明：为控制本次迭代复杂度，采用"模型同步生成 + 前端分段推送"的实现；
-        // SSE 打字机效果在前端按字符间隔渲染，网络传输一次完成。
+    private void doAgentChat(List<RagRetriever.Retrieved> retrieved,
+                             SseEmitter emitter, String cacheKey,
+                             Long userId, String question,
+                             String retrievedIds, long start) {
         new Thread(() -> {
             try {
-                String answer = deepSeekService.chat(messages);
-                // 缓存（TTL 24h）
+                // 执行 Agent：内部可能经历多轮"模型决策 → 工具执行 → 结果回填"
+                AiAgentService.AgentResult result =
+                        aiAgentService.run(question, userId, retrieved);
+                String answer = result.answer();
+
+                // 缓存（TTL 24h）：只缓存最终答案，命中时直接返回、不再走 Agent
                 redisTemplate.opsForValue().set(cacheKey, answer, CACHE_TTL);
-                // 落库
                 int duration = (int) (System.currentTimeMillis() - start);
                 saveRecord(userId, question, answer, retrievedIds, false, duration);
+
+                // 发生过工具调用就先推一个 tool 事件（前端可提示"正在查询订单…"）
+                if (result.usedTools()) {
+                    emitter.send(SseEmitter.event().name("tool").data(result.toolNames()));
+                }
                 // 推送：先按片段推 message 模拟流式，再发 done
                 for (int i = 0; i < answer.length(); i += 20) {
                                 String part = answer.substring(i, Math.min(i + 20, answer.length())).replace("\n", "\\n");
@@ -160,25 +162,14 @@ public class AiChatController {
     }
 
     /**
-     * 组装用户提示词：检索片段格式化为参考资料，让模型受控生成
+     * 查看当前注册的 AI 工具清单（调试/演示用）
+     *
+     * <p>返回内容就是每次请求实际发给大模型的 tools 数组——
+     * 可以直观看到"模型能调哪些工具、每个工具的用途与参数结构"。</p>
      */
-    private String buildUserPrompt(String question, List<RagRetriever.Retrieved> retrieved) {
-        if (retrieved.isEmpty()) {
-            return "【参考资料】（无相关资料）\n\n【用户问题】" + question
-                    + "\n\n请明确告知：这个问题你暂时回答不了，建议咨询学校相关部门。";
-        }
-        StringBuilder sb = new StringBuilder("【参考资料】\n");
-        int i = 1;
-        for (RagRetriever.Retrieved r : retrieved) {
-            sb.append("资料").append(i++).append("（来源：")
-              .append(r.knowledge.getTitle() == null ? "校园公告" : r.knowledge.getTitle())
-              .append("）：")
-              .append(r.knowledge.getContent())
-              .append("\n\n");
-        }
-        sb.append("【用户问题】").append(question)
-          .append("\n\n请依据以上资料回答用户问题；资料中没有的信息请明确说明。");
-        return sb.toString();
+    @GetMapping("/agent/tools")
+    public Result<List<Map<String, Object>>> agentTools() {
+        return Result.success(toolRegistry.toolSchemas());
     }
 
     /** 落库对话记录 */

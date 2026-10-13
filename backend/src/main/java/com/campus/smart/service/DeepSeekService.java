@@ -15,7 +15,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * DeepSeek 大模型调用封装（OpenAI 兼容协议）
@@ -45,19 +48,83 @@ public class DeepSeekService {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    /** 消息结构（role: system/user/assistant） */
+    /** 消息结构（role: system/user/assistant/tool） */
     public static class ChatMessage {
         private final String role;
         private final String content;
+        /** role=tool 时必填：对应 assistant 请求的 tool_call id */
+        private final String toolCallId;
+        /** assistant 请求调用工具时携带 */
+        private final List<ToolCall> toolCalls;
 
         public ChatMessage(String role, String content) {
+            this(role, content, null, null);
+        }
+
+        public ChatMessage(String role, String content, String toolCallId, List<ToolCall> toolCalls) {
             this.role = role;
             this.content = content;
+            this.toolCallId = toolCallId;
+            this.toolCalls = toolCalls;
+        }
+
+        /** 构造 role=tool 的工具结果消息 */
+        public static ChatMessage toolResult(String toolCallId, String content) {
+            return new ChatMessage("tool", content, toolCallId, null);
+        }
+
+        /** 构造带 tool_calls 的 assistant 消息（回传给模型，保持上下文完整） */
+        public static ChatMessage assistantToolCalls(List<ToolCall> calls) {
+            return new ChatMessage("assistant", null, null, calls);
         }
 
         public String role() { return role; }
 
         public String content() { return content; }
+
+        public String toolCallId() { return toolCallId; }
+
+        public List<ToolCall> toolCalls() { return toolCalls; }
+    }
+
+    /** 模型请求的一次工具调用 */
+    public static class ToolCall {
+        private final String id;
+        private final String name;
+        /** 模型填写的参数（JSON 字符串） */
+        private final String arguments;
+
+        public ToolCall(String id, String name, String arguments) {
+            this.id = id;
+            this.name = name;
+            this.arguments = arguments;
+        }
+
+        public String id() { return id; }
+
+        public String name() { return name; }
+
+        public String arguments() { return arguments; }
+    }
+
+    /** 一次模型调用的结果：要么是文本回答，要么是工具调用请求 */
+    public static class ChatResult {
+        private final String content;
+        private final List<ToolCall> toolCalls;
+
+        public ChatResult(String content, List<ToolCall> toolCalls) {
+            this.content = content;
+            this.toolCalls = toolCalls;
+        }
+
+        public String content() { return content; }
+
+        public List<ToolCall> toolCalls() { return toolCalls; }
+
+        /** 是否请求调用工具 */
+        public boolean hasToolCalls() {
+            return toolCalls != null && !toolCalls.isEmpty();
+        }
     }
 
     /**
@@ -143,6 +210,113 @@ public class DeepSeekService {
         }, "deepseek-sse");
         thread.setDaemon(true);
         thread.start();
+    }
+
+    /**
+     * 带工具能力的对话（function calling）
+     *
+     * <p>请求体携带 tools 数组后，模型会返回两类结果之一：
+     * ① 直接给文本回答（说明不需要查实时数据）；
+     * ② 返回 tool_calls 结构（要求后端调用某个工具并回传结果）。
+     * 本方法只负责<b>一次</b>调用与解析，多轮循环由 {@code AiAgentService} 编排。</p>
+     *
+     * @param messages 完整对话上下文（含历史轮次的 assistant/tool 消息）
+     * @param tools    工具 schema 列表（由 AiToolRegistry 生成）
+     * @return 本次调用的结果（文本 或 工具调用请求）
+     */
+    public ChatResult chatWithTools(List<ChatMessage> messages, List<Map<String, Object>> tools) throws Exception {
+        String payload = buildToolPayload(messages, tools);
+        HttpURLConnection conn = openConnection("/chat/completions", payload);
+        int code = conn.getResponseCode();
+        if (code != 200) {
+            String err = readError(conn);
+            log.error("[DeepSeek] 工具调用失败 HTTP {}: {}", code, err);
+            throw new RuntimeException("大模型接口异常(" + code + ")");
+        }
+        StringBuilder body = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                body.append(line);
+            }
+        }
+        JsonNode root = objectMapper.readTree(body.toString());
+        JsonNode msg = root.path("choices").path(0).path("message");
+        String content = msg.path("content").isNull() ? "" : msg.path("content").asText("");
+
+        // 解析工具调用请求
+        List<ToolCall> calls = new ArrayList<>();
+        JsonNode toolCallsNode = msg.path("tool_calls");
+        if (toolCallsNode.isArray()) {
+            for (JsonNode tc : toolCallsNode) {
+                calls.add(new ToolCall(
+                        tc.path("id").asText(""),
+                        tc.path("function").path("name").asText(""),
+                        tc.path("function").path("arguments").asText("{}")));
+            }
+        }
+        if (!calls.isEmpty()) {
+            log.info("[DeepSeek] 模型请求调用 {} 个工具: {}", calls.size(),
+                    calls.stream().map(ToolCall::name).collect(Collectors.toList()));
+        }
+        return new ChatResult(content, calls);
+    }
+
+    /**
+     * 组装带 tools 的请求体
+     *
+     * <p>改用 ObjectMapper 构造而非字符串拼接——因为工具调用涉及嵌套结构
+     * （tool_calls 数组、tool 消息的 tool_call_id），手写 JSON 极易出错。</p>
+     */
+    private String buildToolPayload(List<ChatMessage> messages, List<Map<String, Object>> tools) throws Exception {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("model", chatModel);
+
+        List<Map<String, Object>> msgs = new ArrayList<>();
+        for (ChatMessage m : messages) {
+            msgs.add(messageToMap(m));
+        }
+        body.put("messages", msgs);
+
+        if (tools != null && !tools.isEmpty()) {
+            body.put("tools", tools);
+            // auto：由模型自主决定"直接回答"还是"调用工具"
+            body.put("tool_choice", "auto");
+        }
+        body.put("stream", false);
+        body.put("temperature", 0.3);
+        body.put("max_tokens", 1024);
+        return objectMapper.writeValueAsString(body);
+    }
+
+    /** ChatMessage → OpenAI 兼容的消息对象 */
+    private Map<String, Object> messageToMap(ChatMessage m) {
+        Map<String, Object> map = new LinkedHashMap<>();
+        map.put("role", m.role());
+        if (m.toolCalls() != null && !m.toolCalls().isEmpty()) {
+            // assistant 请求工具：content 为 null，带 tool_calls
+            map.put("content", null);
+            List<Map<String, Object>> tcs = new ArrayList<>();
+            for (ToolCall tc : m.toolCalls()) {
+                Map<String, Object> fn = new LinkedHashMap<>();
+                fn.put("name", tc.name());
+                fn.put("arguments", tc.arguments());
+                Map<String, Object> item = new LinkedHashMap<>();
+                item.put("id", tc.id());
+                item.put("type", "function");
+                item.put("function", fn);
+                tcs.add(item);
+            }
+            map.put("tool_calls", tcs);
+        } else if (m.toolCallId() != null) {
+            // 工具执行结果：role=tool + tool_call_id
+            map.put("content", m.content() == null ? "" : m.content());
+            map.put("tool_call_id", m.toolCallId());
+        } else {
+            map.put("content", m.content() == null ? "" : m.content());
+        }
+        return map;
     }
 
     /** 组装请求体 */
