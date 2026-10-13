@@ -103,6 +103,10 @@
       <!-- 底部留白 -->
       <view style="height: 40rpx;"></view>
     </scroll-view>
+      <!-- AI 助手悬浮球 -->
+    <view class="ai-fab" @click="goAiChat">
+      <text class="ai-fab-icon">🤖</text>
+    </view>
   </view>
 </template>
 
@@ -283,6 +287,9 @@ async function onRefresh() {
 function loadMore() {
   // 这里可以加载更多活动
   console.log('加载更多')
+}
+function goAiChat() {
+  uni.navigateTo({ url: '/pages/ai/chat' })
 }
 </script>
 
@@ -534,5 +541,24 @@ function loadMore() {
   color: #fff;
   font-size: 24rpx;
   flex-shrink: 0;
+}
+
+/* AI 助手悬浮球 */
+.ai-fab {
+  position: fixed;
+  right: 30rpx;
+  bottom: 160rpx;
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #12b7f5, #6c4ee6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(108, 78, 230, 0.4);
+  z-index: 999;
+}
+.ai-fab .ai-fab-icon {
+  font-size: 44rpx;
 }
 </style>

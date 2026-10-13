@@ -120,6 +120,10 @@
         </view>
       </view>
     </view>
+      <!-- AI 助手悬浮球 -->
+    <view class="ai-fab" @click="goAiChat">
+      <text class="ai-fab-icon">🤖</text>
+    </view>
   </view>
 </template>
 
@@ -396,6 +400,9 @@ async function onRefresh() {
   } finally {
     isRefreshing.value = false
   }
+}
+function goAiChat() {
+  uni.navigateTo({ url: '/pages/ai/chat' })
 }
 </script>
 
@@ -736,5 +743,24 @@ async function onRefresh() {
     color: #6c4ee6;
     font-weight: bold;
   }
+}
+
+/* AI 助手悬浮球 */
+.ai-fab {
+  position: fixed;
+  right: 30rpx;
+  bottom: 160rpx;
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #12b7f5, #6c4ee6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(108, 78, 230, 0.4);
+  z-index: 999;
+}
+.ai-fab .ai-fab-icon {
+  font-size: 44rpx;
 }
 </style>

@@ -1,6 +1,14 @@
 {
   "pages": [
     {
+      "path": "pages/ai/chat",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "AI校园助手",
+        "disableScroll": true
+      }
+    },
+    {
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "校园帮手",
