@@ -290,13 +290,11 @@ function loadMore() {
 }
 let aiFabExpanded = false
 function onAiFabClick() {
-  // 第一次点击：滑出悬浮球；已展开则直接进入
   if (!aiFabExpanded) {
+    // 第一次点击：只冒头完整显示，不跳转
     aiFabExpanded = true
-    // 模板里用的响应式状态在 setup 中需要 ref—— uni-app vue3 setup 中直接改普通变量不触发视图
-    // 因此用 class 切换通过 DOM 操作兜底（或声明 ref）。此处简单起见：展开后 600ms 跳转
-    setTimeout(() => { uni.navigateTo({ url: '/pages/ai/chat' }) }, 600)
   } else {
+    // 已展开：进入 AI 助手
     uni.navigateTo({ url: '/pages/ai/chat' })
   }
 }
