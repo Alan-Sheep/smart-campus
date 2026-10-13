@@ -140,11 +140,11 @@ public class AiChatController {
                 saveRecord(userId, question, answer, retrievedIds, false, duration);
                 // 推送：先按片段推 message 模拟流式，再发 done
                 for (int i = 0; i < answer.length(); i += 20) {
-                    String part = answer.substring(i, Math.min(i + 20, answer.length()));
+                                String part = answer.substring(i, Math.min(i + 20, answer.length())).replace("\n", "\\n");
                     emitter.send(SseEmitter.event().name("message").data(part));
                     Thread.sleep(30);
                 }
-                emitter.send(SseEmitter.event().name("done").data(answer));
+                emitter.send(SseEmitter.event().name("done").data(answer.replace("\n", "\\n")));
                 emitter.complete();
             } catch (Exception e) {
                 log.error("[AI] 生成/推送异常", e);

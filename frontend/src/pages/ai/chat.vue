@@ -222,7 +222,7 @@ async function h5StreamChat(url, token, aiMsg) {
         aiMsg.content = data || 'AI 助手开小差了'
         return
       } else if (eventName === 'done') {
-        aiMsg.content = data // 用完整文本覆盖（保证一致性）
+        aiMsg.content = data.replace(/\\n/g, '\n') // 用完整文本覆盖（保证一致性）
         return
       }
     }
@@ -261,7 +261,7 @@ function mpStreamChat(url, token, currentSchool, aiMsg) {
         } else if (eventName === 'error') {
           aiMsg.content = data || 'AI 助手开小差了'
         } else if (eventName === 'done') {
-          aiMsg.content = data
+        aiMsg.content = data.replace(/\\n/g, '\n')
         }
       }
       resolve()
