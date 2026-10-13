@@ -13,10 +13,10 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8-4479a1)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-[![Backend](https://img.shields.io/badge/后端-147%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
-[![Frontend](https://img.shields.io/badge/用户端-40%20Vue组件-4FC08D?style=flat-square&logo=vuedotjs)](frontend/)
-[![API](https://img.shields.io/badge/接口-26%20控制器-009688?style=flat-square)](backend/src/main/java/com/campus/smart/controller)
-[![DB](https://img.shields.io/badge/数据库-23%20张表-336791?style=flat-square&logo=mysql)](sql/)
+[![Backend](https://img.shields.io/badge/后端-157%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
+[![Frontend](https://img.shields.io/badge/用户端-41%20Vue组件-4FC08D?style=flat-square&logo=vuedotjs)](frontend/)
+[![API](https://img.shields.io/badge/接口-28%20控制器-009688?style=flat-square)](backend/src/main/java/com/campus/smart/controller)
+[![DB](https://img.shields.io/badge/数据库-25%20张表-336791?style=flat-square&logo=mysql)](sql/)
 [![Lines](https://img.shields.io/badge/代码-8.0万%2B%20行-important?style=flat-square)](#)
 
 *独立完成的前后端全栈项目 · 从需求分析、数据库设计到接口测试全流程*
@@ -180,7 +180,7 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 
 ### 数据库
 
-23 张表，含外键约束、唯一索引（如 `uk_user_email`）、复合索引（多校隔离查询）、逻辑删除字段。完整建表与迁移脚本见 [sql/](sql/)。
+25 张表，含外键约束、唯一索引（如 `uk_user_email`）、复合索引（多校隔离查询）、逻辑删除字段。完整建表与迁移脚本见 [sql/](sql/)。
 
 ---
 
@@ -200,7 +200,7 @@ JDK 21+ · MySQL 8+ · Redis 6+ · Node.js 16+ · Maven 3.6+
 mysql -uroot -p < sql/smart_campus_full_dump.sql
 ```
 
-> 包含 23 张表结构 + 全部演示数据（60 用户 / 33 帖子 / 570+ 订单 / 300 活动 / 聊天互动），一条命令即可跑起完整项目
+> 包含 25 张表结构 + 全部演示数据（60 用户 / 28 帖子 / 570+ 订单 / 300 活动 / 聊天互动），一条命令即可跑起完整项目
 
 **方式二：分步执行迁移脚本**
 
@@ -272,7 +272,7 @@ SmartCampus
 │   └── src/main/java/com/campus/smart
 │       ├── controller/             # 26 个控制器（用户/频道/订单类/管理端）
 │       ├── service/                # 业务层（EmailCodeService 安全设计是亮点）
-│       ├── entity/                 # MyBatis-Plus 实体（23 张表）
+│       ├── entity/                 # MyBatis-Plus 实体（25 张表）
 │       ├── interceptor/            # JWT 鉴权 / 学校上下文 / 管理员权限
 │       ├── config/                 # 拦截链 · Redis 配置 · 全局异常
 │       └── utils/                  # Redis 工具 · JWT · ThreadLocal 上下文
