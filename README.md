@@ -105,13 +105,33 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 
 ---
 
-## ✨ 核心设计与亮点---|---|---|
+## ✨ 核心设计与亮点
+
+> 💡 以下每个点都有真实代码支撑，欢迎按图索骥
+
+### 🔐 认证与安全
+
+| 设计点 | 实现 | 代码位置 |
+|---|---|---|
 | 邮箱验证码登录 | SMTP 真实发送 + 开发模式 Mock 切换（配置驱动） | [EmailCodeService](backend/src/main/java/com/campus/smart/service/EmailCodeService.java) |
 | 三层防刷 | 同邮箱 60s 重发间隔 + 单邮箱单日上限 + 同 IP 单日上限（全部 Redis 后端强校验） | 同上 |
 | 防暴力破解 | 验证码错误 5 次锁定 30 分钟，锁定期间禁止重发 | 同上 |
 | 一次性消费 | 验证码校验通过立即删除，杜绝重放 | 同上 |
 | 认证漏洞修复 | 修复「验证码参数为空即跳过校验」的认证绕过漏洞 | [UserController](backend/src/main/java/com/campus/smart/controller/UserController.java) |
 | JWT 无状态认证 | 拦截器统一鉴权；公开接口白名单 + 尽力身份识别（匿名页也能展示个人点赞/收藏态） | [JwtInterceptor](backend/src/main/java/com/campus/smart/interceptor/JwtInterceptor.java) |
+
+### 🤖 AI 智能问答（RAG 检索增强生成）
+
+| 设计点 | 实现 | 代码位置 |
+|---|---|---|
+| 知识切块入库 | 校园公告按 400 字切块、相邻块 50 字重叠，避免关键句被切在边界 | [KnowledgeIngestService](backend/src/main/java/com/campus/smart/service/KnowledgeIngestService.java) |
+| 轻量向量化 | 字符 n-gram 哈希映射 256 维向量（词频归一化），万级数据免 Embedding API、零成本零依赖 | [LocalVectorizer](backend/src/main/java/com/campus/smart/utils/LocalVectorizer.java) |
+| 向量召回 | 知识向量内存缓存 + 余弦相似度全量打分取 Top-K | [RagRetriever](backend/src/main/java/com/campus/smart/service/RagRetriever.java) |
+| **动态相对阈值** | 固定阈值不适配 n-gram 分布（实测最高分仅 0.007 导致召回全空），改为「最高分×40%」相对过滤，防幻觉且跨问题长度稳定 | 同上 |
+| 幻觉抑制 | 提示词强约束「仅依据参考资料作答」+ 无资料明确告知 + 检索为空走兜底话术 | [AiChatController](backend/src/main/java/com/campus/smart/controller/AiChatController.java) |
+| SSE 流式输出 | 后端逐段推送 + 双端适配（H5 fetch ReadableStream / 小程序 enableChunked），打字机体验 | [DeepSeekService](backend/src/main/java/com/campus/smart/service/DeepSeekService.java) |
+| 高频问答缓存 | 问题归一化后 MD5 作 key、TTL 24h；实测命中 **1ms** vs 未命中 **1151ms** | 同上（Controller） |
+| 检索污染治理 | 跨校复制的重复公告去重（90→16 核心片段），避免通用文档霸占 Top-K 挤掉真实答案 | 同上 |
 
 ### 🏫 多学校数据隔离（本项目最有特色的业务设计）
 
