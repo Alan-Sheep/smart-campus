@@ -73,8 +73,11 @@ public class AiChatController {
         String cached = redisTemplate.opsForValue().get(cacheKey);
         if (cached != null) {
             try {
-                emitter.send(SseEmitter.event().name("message").data(cached));
-                emitter.send(SseEmitter.event().name("done").data(cached));
+                // 注意：SSE 以空行分隔事件，缓存里的真实换行必须转义为字面 \n，
+                // 否则前端按空行分帧时只拿到第一段（表现为回答被截断）
+                String safeCached = cached.replace("\n", "\\n");
+                emitter.send(SseEmitter.event().name("message").data(safeCached));
+                emitter.send(SseEmitter.event().name("done").data(safeCached));
                 emitter.complete();
                 saveRecord(userId, question, cached, null, true,
                         (int) (System.currentTimeMillis() - start));
