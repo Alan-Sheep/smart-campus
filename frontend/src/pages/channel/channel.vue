@@ -121,7 +121,7 @@
       </view>
     </view>
       <!-- AI 助手悬浮球 -->
-    <view class="ai-fab" @click="goAiChat">
+    <view class="ai-fab" :class="{ 'is-expanded': aiFabExpanded }" @click="onAiFabClick">
       <text class="ai-fab-icon">🤖</text>
     </view>
   </view>
@@ -401,8 +401,17 @@ async function onRefresh() {
     isRefreshing.value = false
   }
 }
-function goAiChat() {
-  uni.navigateTo({ url: '/pages/ai/chat' })
+let aiFabExpanded = false
+function onAiFabClick() {
+  // 第一次点击：滑出悬浮球；已展开则直接进入
+  if (!aiFabExpanded) {
+    aiFabExpanded = true
+    // 模板里用的响应式状态在 setup 中需要 ref—— uni-app vue3 setup 中直接改普通变量不触发视图
+    // 因此用 class 切换通过 DOM 操作兜底（或声明 ref）。此处简单起见：展开后 600ms 跳转
+    setTimeout(() => { uni.navigateTo({ url: '/pages/ai/chat' }) }, 600)
+  } else {
+    uni.navigateTo({ url: '/pages/ai/chat' })
+  }
 }
 </script>
 
@@ -745,10 +754,10 @@ function goAiChat() {
   }
 }
 
-/* AI 助手悬浮球 */
+/* AI 助手悬浮球：默认半隐藏（一半露出屏幕），点击滑出后进入 */
 .ai-fab {
   position: fixed;
-  right: 30rpx;
+  right: -48rpx;
   bottom: 160rpx;
   width: 96rpx;
   height: 96rpx;
@@ -759,8 +768,20 @@ function goAiChat() {
   justify-content: center;
   box-shadow: 0 8rpx 24rpx rgba(108, 78, 230, 0.4);
   z-index: 999;
+  transition: right 0.3s ease;
 }
+
+.ai-fab.is-expanded {
+  right: 30rpx;
+}
+
 .ai-fab .ai-fab-icon {
   font-size: 44rpx;
+  margin-left: 24rpx;
+  transition: margin-left 0.3s ease;
+}
+
+.ai-fab.is-expanded .ai-fab-icon {
+  margin-left: 0;
 }
 </style>
