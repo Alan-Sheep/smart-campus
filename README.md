@@ -13,7 +13,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8-4479a1)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-[![Backend](https://img.shields.io/badge/后端-157%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
+[![Backend](https://img.shields.io/badge/后端-163%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
 [![Frontend](https://img.shields.io/badge/用户端-41%20Vue组件-4FC08D?style=flat-square&logo=vuedotjs)](frontend/)
 [![API](https://img.shields.io/badge/接口-28%20控制器-009688?style=flat-square)](backend/src/main/java/com/campus/smart/controller)
 [![DB](https://img.shields.io/badge/数据库-25%20张表-336791?style=flat-square&logo=mysql)](sql/)
