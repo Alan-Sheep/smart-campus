@@ -9,12 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 数据初始化器
  * 项目启动时执行，确保基础数据存在
  */
 @Component
+@Slf4j
 public class DataInitializer implements CommandLineRunner {
 
     @Autowired
@@ -30,7 +32,7 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) {
         initSchool();
         initAdmin();
-        System.out.println("============ 数据初始化完成 ============");
+        log.info("============ 数据初始化完成 ============");
     }
 
     /**
@@ -63,7 +65,7 @@ public class DataInitializer implements CommandLineRunner {
             school3.setStatus(1);
             schoolService.save(school3);
 
-            System.out.println("初始化学校数据完成，共3所学校");
+            log.info("初始化学校数据完成，共3所学校");
         }
     }
 
@@ -85,7 +87,7 @@ public class DataInitializer implements CommandLineRunner {
             admin.setRole("2"); // 超级管理员
             admin.setStatus(1);
             adminService.save(admin);
-            System.out.println("初始化超级管理员成功，账号：admin / admin123");
+            log.info("初始化超级管理员成功，账号：admin / admin123");
         } else {
             // 已存在则校验密码，如果不对就重置（防止SQL里的hash不正确）
             try {
@@ -94,7 +96,7 @@ public class DataInitializer implements CommandLineRunner {
                     update.setId(admin.getId());
                     update.setPassword(passwordEncoder.encode("admin123"));
                     adminService.updateById(update);
-                    System.out.println("重置管理员密码为：admin123");
+                    log.info("重置管理员密码为：admin123");
                 }
             } catch (Exception e) {
                 // 密码格式不对，直接重置
@@ -102,7 +104,7 @@ public class DataInitializer implements CommandLineRunner {
                 update.setId(admin.getId());
                 update.setPassword(passwordEncoder.encode("admin123"));
                 adminService.updateById(update);
-                System.out.println("管理员密码格式异常，已重置为：admin123");
+                log.info("管理员密码格式异常，已重置为：admin123");
             }
         }
     }

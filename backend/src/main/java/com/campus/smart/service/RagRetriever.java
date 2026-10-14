@@ -63,7 +63,7 @@ public class RagRetriever {
         for (int i = 0; i < Math.min(5, scored.size()); i++) {
             dbg.append(String.format("[%d]=%.4f ", scored.get(i).knowledge.getId(), scored.get(i).score));
         }
-        log.info("[RAG] {}", dbg);
+        log.debug("[RAG] 相似度 Top5: {}", dbg);
         List<Retrieved> top = scored.subList(0, Math.min(topK, scored.size()));
         log.info("[RAG] 问题='{}' 召回 {} 条（总分池 {}，阈值 {}）", question, top.size(), scored.size(), minScore);
         return top;

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.campus.smart.entity.ErrandOrder;
 import com.campus.smart.mapper.ErrandOrderMapper;
 import com.campus.smart.service.ai.AiTool;
+import com.campus.smart.service.ai.AiToolSupport;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -68,7 +69,7 @@ public class QueryErrandOrderTool implements AiTool {
 
         Object statusArg = args.get("status");
         if (statusArg != null && !"all".equals(String.valueOf(statusArg))) {
-            Integer status = mapStatus(String.valueOf(statusArg));
+            Integer status = AiToolSupport.mapStatus(String.valueOf(statusArg));
             if (status != null) {
                 qw.eq(ErrandOrder::getStatus, status);
             }
@@ -93,39 +94,16 @@ public class QueryErrandOrderTool implements AiTool {
         int i = 1;
         for (ErrandOrder o : list) {
             sb.append(i++).append(". 订单号 ").append(o.getOrderNo())
-              .append(" | 事项：").append(nullToEmpty(o.getTitle()))
-              .append(" | 状态：").append(statusText(o.getStatus()))
-              .append(" | 取货：").append(nullToEmpty(o.getPickupAddress()))
-              .append(" | 送达：").append(nullToEmpty(o.getDeliveryAddress()))
-              .append(" | 期望时间：").append(nullToEmpty(o.getEstimatedTime()))
-              .append(" | 金额：￥").append(o.getTotalAmount() == null ? "0" : o.getTotalAmount())
+              .append(" | 事项：").append(AiToolSupport.textOrNone(o.getTitle()))
+              .append(" | 状态：").append(AiToolSupport.statusText(o.getStatus()))
+              .append(" | 取货：").append(AiToolSupport.textOrNone(o.getPickupAddress()))
+              .append(" | 送达：").append(AiToolSupport.textOrNone(o.getDeliveryAddress()))
+              .append(" | 期望时间：").append(AiToolSupport.textOrNone(o.getEstimatedTime()))
+              .append(" | 金额：￥").append(AiToolSupport.amountOrZero(o.getTotalAmount()))
               .append("\n");
         }
         sb.append("请基于以上真实数据回答用户，不要添加数据中没有的信息。");
         return sb.toString();
     }
 
-    private Integer mapStatus(String s) {
-        switch (s) {
-            case "pending": return 1;
-            case "processing": return 2;
-            case "done": return 3;
-            default: return null;
-        }
-    }
-
-    private String statusText(Integer status) {
-        if (status == null) return "未知";
-        switch (status) {
-            case 0: return "已取消";
-            case 1: return "待接单";
-            case 2: return "已接单（进行中）";
-            case 3: return "已完成";
-            default: return "状态" + status;
-        }
-    }
-
-    private String nullToEmpty(String s) {
-        return s == null ? "无" : s;
-    }
 }

@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Redis 工具类
@@ -18,6 +19,7 @@ import java.util.concurrent.TimeUnit;
  * @author smart-campus
  */
 @Component
+@Slf4j
 public class RedisUtils {
 
     /**
@@ -66,7 +68,7 @@ public class RedisUtils {
                 // 尝试恢复，重置状态
                 circuitBroken = false;
                 failCount = 0;
-                System.out.println("[Redis] 熔断器尝试恢复");
+                log.info("[Redis] 熔断器尝试恢复");
                 return true;
             }
             return false;

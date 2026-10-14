@@ -75,9 +75,11 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
   </tr>
   <tr>
     <td colspan="3" align="center">
-      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat-2.png?v=2" width="320"/>
-      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat.png?v=2" width="320"/>
-      <br/><b>🤖 AI 智能问答助手（RAG · 多轮对话 · 幻觉抑制 · 流式输出）</b>
+      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat.png?v=2" width="240"/>
+      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat-2.png?v=2" width="240"/>
+      <img src="https://cdn.jsdelivr.net/gh/Alan-Sheep/smart-campus@main/docs/screenshots/ai-chat-agent.png?v=2" width="240"/>
+      <br/><b>🤖 AI 智能问答助手</b><br/>
+      <i>左：RAG 知识问答（依据公告作答） · 中：多轮对话 · 右：Agent 工具调用（自主查订单，标注数据来源）</i>
     </td>
   </tr>
 </table>

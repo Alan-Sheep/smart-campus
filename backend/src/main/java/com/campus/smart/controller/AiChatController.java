@@ -9,9 +9,14 @@ import com.campus.smart.service.AiAgentService;
 import com.campus.smart.service.DeepSeekService;
 import com.campus.smart.service.KnowledgeIngestService;
 import com.campus.smart.service.RagRetriever;
+import com.campus.smart.service.ai.AiToolRegistry;
+import com.campus.smart.mapper.AiKnowledgeMapper;
 import com.campus.smart.utils.UserContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
@@ -19,17 +24,17 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.time.Duration;
-import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * AI 智能问答接口（RAG）
+ * AI 智能问答接口（RAG + Agent 工具调用）
  *
  * <p>调用链：用户提问 → Redis 高频缓存命中检查 →
- * （未命中）RAG 检索召回知识片段 → 组装受控提示词 →
- * DeepSeek 流式生成 → SSE 推送前端 → 异步落库</p>
+ * （未命中）RAG 预检索召回知识片段 → 交给 {@link AiAgentService} 编排
+ * （模型可自主决定直接回答或调用工具查实时数据，最多 3 轮）→ SSE 推送前端 → 落库</p>
  *
  * @author 万盛博
  */
@@ -37,6 +42,16 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/ai")
 public class AiChatController {
+
+    /** SSE 连接超时（毫秒）：Agent 可能多轮调用模型，需留足余量 */
+    private static final long SSE_TIMEOUT_MS = 60_000L;
+
+    /** RAG 预检索参数：走配置便于调优（避免代码里硬编码与 yml 定义漂移） */
+    @Value("${rag.top-k:5}")
+    private int ragTopK;
+
+    @Value("${rag.min-score:0.003}")
+    private double ragMinScore;
 
     @Autowired
     private RagRetriever retriever;
@@ -48,7 +63,7 @@ public class AiChatController {
     private AiAgentService aiAgentService;
 
     @Autowired
-    private com.campus.smart.service.ai.AiToolRegistry toolRegistry;
+    private AiToolRegistry toolRegistry;
 
     @Autowired
     private KnowledgeIngestService ingestService;
@@ -57,7 +72,7 @@ public class AiChatController {
     private AiChatRecordMapper chatRecordMapper;
 
     @Autowired
-    private com.campus.smart.mapper.AiKnowledgeMapper knowledgeMapper;
+    private AiKnowledgeMapper knowledgeMapper;
 
     @Autowired
     private StringRedisTemplate redisTemplate;
@@ -66,14 +81,17 @@ public class AiChatController {
     private static final String CACHE_KEY_PREFIX = "campus:ai:qa:v2:";
     private static final Duration CACHE_TTL = Duration.ofHours(24);
 
+    /** 用于构造/解析缓存 JSON（局部实例，不注册为 Bean，避免污染 Spring MVC 的消息转换器） */
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
     /**
      * AI 问答（SSE 流式）
-     * 前端用 EventSource 订阅：message=增量片段 done=完整回答 error=异常
+     * 前端订阅事件：tool=调用的工具 message=增量片段 done=完整回答 error=异常
      */
     @GetMapping("/chat")
     public SseEmitter chat(@RequestParam String question) {
         long start = System.currentTimeMillis();
-        SseEmitter emitter = new SseEmitter(60_000L);
+        SseEmitter emitter = new SseEmitter(SSE_TIMEOUT_MS);
         Long userId = UserContext.getUserId();
 
         // 1. Redis 缓存命中检查（问题归一化后取 MD5 作 key）
@@ -81,13 +99,30 @@ public class AiChatController {
         String cached = redisTemplate.opsForValue().get(cacheKey);
         if (cached != null) {
             try {
+                // 缓存格式为 JSON：{"a":答案, "t":工具名}；同时兼容早期的纯文本格式
+                String cachedAnswer = cached;
+                String cachedTools = "";
+                if (cached.startsWith("{")) {
+                    try {
+                        JsonNode node = objectMapper.readTree(cached);
+                        cachedAnswer = node.path("a").asText("");
+                        cachedTools = node.path("t").asText("");
+                    } catch (Exception e) {
+                        log.warn("[AI] 缓存内容解析失败，按纯文本处理");
+                    }
+                }
+                // 工具调用标记也要一起回放——否则「命中缓存的回答」与「首次生成的回答」
+                // 在同一个前端上表现不一致（前者没有数据来源标记）
+                if (!cachedTools.isEmpty()) {
+                    emitter.send(SseEmitter.event().name("tool").data(cachedTools));
+                }
                 // 注意：SSE 以空行分隔事件，缓存里的真实换行必须转义为字面 \n，
                 // 否则前端按空行分帧时只拿到第一段（表现为回答被截断）
-                String safeCached = cached.replace("\n", "\\n");
-                emitter.send(SseEmitter.event().name("message").data(safeCached));
-                emitter.send(SseEmitter.event().name("done").data(safeCached));
+                String safeAnswer = cachedAnswer.replace("\n", "\\n");
+                emitter.send(SseEmitter.event().name("message").data(safeAnswer));
+                emitter.send(SseEmitter.event().name("done").data(safeAnswer));
                 emitter.complete();
-                saveRecord(userId, question, cached, null, true,
+                saveRecord(userId, question, cachedAnswer, null, true,
                         (int) (System.currentTimeMillis() - start));
             } catch (Exception e) {
                 log.warn("[AI] 缓存命中推送失败", e);
@@ -97,7 +132,7 @@ public class AiChatController {
 
         // 2. RAG 预检索：召回知识片段，保证基础问答能力
         List<RagRetriever.Retrieved> retrieved =
-                retriever.retrieve(question, 5, 0.003);
+                retriever.retrieve(question, ragTopK, ragMinScore);
 
         // 3. 交给 Agent 编排：模型可自主决定"直接回答"或"调用工具查实时数据"
         String retrievedIds = retrieved.stream()
@@ -134,8 +169,10 @@ public class AiChatController {
                         aiAgentService.run(question, userId, retrieved);
                 String answer = result.answer();
 
-                // 缓存（TTL 24h）：只缓存最终答案，命中时直接返回、不再走 Agent
-                redisTemplate.opsForValue().set(cacheKey, answer, CACHE_TTL);
+                // 缓存（TTL 24h）：答案 + 工具调用信息一起存，
+                // 保证命中缓存时前端能回放出与首次生成一致的"数据来源"标记
+                redisTemplate.opsForValue().set(cacheKey,
+                        buildCacheValue(answer, result.toolNames()), CACHE_TTL);
                 int duration = (int) (System.currentTimeMillis() - start);
                 saveRecord(userId, question, answer, retrievedIds, false, duration);
 
@@ -170,6 +207,24 @@ public class AiChatController {
     @GetMapping("/agent/tools")
     public Result<List<Map<String, Object>>> agentTools() {
         return Result.success(toolRegistry.toolSchemas());
+    }
+
+    /**
+     * 构造缓存值：把「答案 + 工具调用信息」序列化为 JSON
+     *
+     * <p>缓存里必须连"用了哪些工具"一起存——否则命中缓存时前端拿不到工具标记，
+     * 同一个问题第二次提问的界面表现会和第一次不一致。</p>
+     */
+    private String buildCacheValue(String answer, String tools) {
+        try {
+            Map<String, Object> map = new LinkedHashMap<>();
+            map.put("a", answer);
+            map.put("t", tools == null ? "" : tools);
+            return objectMapper.writeValueAsString(map);
+        } catch (Exception e) {
+            log.warn("[AI] 缓存序列化失败，降级为纯文本存储", e);
+            return answer;
+        }
     }
 
     /** 落库对话记录 */

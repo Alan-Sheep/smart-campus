@@ -23,10 +23,17 @@ import java.util.stream.Collectors;
 /**
  * DeepSeek 大模型调用封装（OpenAI 兼容协议）
  *
- * <p>支持两种模式：
- * 1. 同步调用（{@link #chat}）：一次性返回完整回答，用于内部调用与降级兜底；
- * 2. SSE 流式调用（{@link #chatStream}）：token 逐段推送到前端，打字机体验，
- *    大幅降低长回答的体感等待时间。</p>
+ * <p>本类提供三种调用模式，当前架构使用第 3 种：</p>
+ * <ol>
+ *   <li><b>同步对话（{@link #chat}）</b>：一次性返回完整回答。
+ *       当前由 Agent 链路替代，保留作为「无工具的单轮问答」备选实现与统一入口。</li>
+ *   <li><b>SSE 真流式（{@link #chatStream}）</b>：模型 token 边生成边推送。
+ *       当前架构未启用——Agent 每一轮都要拿到<b>完整响应</b>才能判断
+ *       "直接回答"还是"要调工具"，中间过程无法流式；保留作为单轮场景的低延迟方案。</li>
+ *   <li><b>带工具的对话（{@link #chatWithTools}）</b>：<b>当前主链路</b>。
+ *       请求携带 tools 数组，模型可返回 tool_calls 要求调用工具，
+ *       多轮循环由 {@code AiAgentService} 编排。</li>
+ * </ol>
  *
  * @author 万盛博
  */

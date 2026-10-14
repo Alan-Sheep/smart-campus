@@ -51,6 +51,10 @@
 
         <!-- 气泡 -->
         <view class="bubble-wrap">
+          <!-- Agent 工具调用标记：告诉用户这个答案是查过实时数据的，而不是模型猜的 -->
+          <view class="tool-tag" v-if="msg.tools">
+            <text class="tool-tag-text">🔧 已查：{{ toolHintText(msg.tools) }}</text>
+          </view>
           <view class="bubble" :class="{ 'ai-bubble': !msg.isMine }">
             <text class="bubble-text">{{ msg.content }}<text v-if="msg.typing" class="cursor">▌</text></text>
           </view>
@@ -112,6 +116,24 @@ onMounted(() => {
 
 function goBack() {
   uni.navigateBack()
+}
+
+/**
+ * 工具名 → 中文提示（用于"已查：xxx"标记）
+ * 后端通过 SSE 的 tool 事件告知本次调用了哪些工具
+ */
+const TOOL_NAME_MAP = {
+  query_express_order: '快递订单',
+  query_errand_order: '跑腿订单',
+  search_notice: '校园资料'
+}
+
+function toolHintText(names) {
+  if (!names) return ''
+  return String(names)
+    .split(',')
+    .map(function (n) { return TOOL_NAME_MAP[n] || n })
+    .join(' · ')
 }
 
 function askQuick(q) {
@@ -215,6 +237,11 @@ async function h5StreamChat(url, token, aiMsg) {
       if (eventName === 'message' && data) {
         aiMsg.content += data
         scrollToBottom()
+      } else if (eventName === 'tool') {
+        // 后端告知本次 Agent 调用了哪些工具（如 query_express_order）
+        // → 展示成"已查询快递订单"的标记，让用户知道答案来自实时数据而不是模型猜测
+        aiMsg.tools = data
+        scrollToBottom()
       } else if (eventName === 'error') {
         aiMsg.content = data || 'AI 助手开小差了'
         return
@@ -255,10 +282,14 @@ function mpStreamChat(url, token, currentSchool, aiMsg) {
         if (eventName === 'message' && data) {
           aiMsg.content += data
           scrollToBottom()
+        } else if (eventName === 'tool') {
+          // 与 H5 端保持一致：记录本次 Agent 调用的工具，展示成数据来源标记
+          aiMsg.tools = data
+          scrollToBottom()
         } else if (eventName === 'error') {
           aiMsg.content = data || 'AI 助手开小差了'
         } else if (eventName === 'done') {
-        aiMsg.content = data.replace(/\\n/g, '\n')
+          aiMsg.content = data.replace(/\\n/g, '\n')
         }
       }
       resolve()
@@ -430,6 +461,22 @@ function getCurrentBase() {
 
   .bubble-wrap {
     max-width: 70%;
+
+    /* Agent 工具调用标记：小字标签，弱化显示不抢气泡视觉 */
+    .tool-tag {
+      margin-top: 8rpx;
+      margin-bottom: 4rpx;
+
+      .tool-tag-text {
+        display: inline-block;
+        font-size: 20rpx;
+        color: #6c4ee6;
+        background: #f3efff;
+        border: 1rpx solid #e0d8ff;
+        padding: 4rpx 14rpx;
+        border-radius: 8rpx;
+      }
+    }
 
     .bubble {
       background: #fff;
