@@ -13,11 +13,11 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8-4479a1)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-[![Backend](https://img.shields.io/badge/后端-163%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
+[![Backend](https://img.shields.io/badge/后端-164%20Java文件-59666c?style=flat-square&logo=spring)](backend/)
 [![Frontend](https://img.shields.io/badge/用户端-41%20Vue组件-4FC08D?style=flat-square&logo=vuedotjs)](frontend/)
 [![API](https://img.shields.io/badge/接口-28%20控制器-009688?style=flat-square)](backend/src/main/java/com/campus/smart/controller)
 [![DB](https://img.shields.io/badge/数据库-25%20张表-336791?style=flat-square&logo=mysql)](sql/)
-[![Lines](https://img.shields.io/badge/代码-8.0万%2B%20行-important?style=flat-square)](#)
+[![Lines](https://img.shields.io/badge/代码-3.7万%20行-important?style=flat-square)](#-代码统计)
 
 *独立完成的前后端全栈项目 · 从需求分析、数据库设计到接口测试全流程*
 
@@ -49,6 +49,19 @@ SmartCampus 是一个面向高校场景的校园服务平台，覆盖 **10 大�
 │      内容审核 · 订单管理 · 用户管理 · 数据看板(ECharts)      │
 └─────────────────────────────────────────────────────────┘
 ```
+
+### 📊 代码统计
+
+> 数据为**仓库实测**（`git ls-files` + 行数统计），可自行复核。
+
+| 模块 | 技术栈 | 文件数 | 代码行数 |
+|---|---|---|---|
+| 后端 | Spring Boot · MyBatis-Plus | 164 | 9,254 |
+| 用户端 | uni-app + Vue3（H5 / 小程序） | 63 | 17,826 |
+| 管理端 | Vue3 + Element Plus + ECharts | 26 | 6,025 |
+| 数据库脚本 | MySQL DDL / 迁移 / 种子数据 | 21 | 2,977 |
+| 小程序原生 | WXML / WXSS | 28 | 380 |
+| **合计** | | **302** | **约 3.7 万行** |
 
 ---
 

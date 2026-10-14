@@ -48,17 +48,23 @@ public class LocalVectorizer {
                 buckets.merge(bucket, 1.0, Double::sum);
             }
         }
-        // 词频归一化（除以 n-gram 总数）得到归一化向量
-        double total = buckets.values().stream().mapToDouble(Double::doubleValue).sum();
+        // L2 归一化：使向量模长为 1，这样点积才等于余弦相似度
+        // （早期版本误用 L1 归一化"除以总和"，导致相同文本的相似度只有 0.077、
+        //   且长文本得分天然偏低——由单元测试 LocalVectorizerTest 发现并修正）
+        double norm = Math.sqrt(buckets.values().stream()
+                .mapToDouble(v -> v * v).sum());
         double[] vec = new double[DIM];
-        if (total > 0) {
-            buckets.forEach((k, v) -> vec[k] = v / total);
+        if (norm > 0) {
+            buckets.forEach((k, v) -> vec[k] = v / norm);
         }
         return vec;
     }
 
     /**
-     * 余弦相似度（输入向量已归一化，等价于点积）
+     * 余弦相似度
+     *
+     * <p>前提：输入向量已做 <b>L2 归一化</b>（模长为 1），此时余弦相似度等价于点积，
+     * 取值范围 0~1——相同文本为 1.0，完全不相关趋近 0。</p>
      */
     public double cosineSimilarity(double[] a, double[] b) {
         double dot = 0.0;
